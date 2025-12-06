@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+  <title>Detailed Report — For More Information</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-title">
+          <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+          <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
+          <span class="separator">/</span>
+          <a href="../projects/project-medical-chatbot.html">Medical Chatbot with Generative AI</a>
+          <span class="separator">/</span>
+          <span class="current">Detailed Report</span>
+        </div>
+        <div class="header-actions">
+          <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <i class="ri-moon-fill"></i>
+          </button>
+          <button class="change-language">Spanish</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="project-hero">
+        <img src="../assets/img/portfolio-3.jpg" alt="Vinyl Record">
+    </div>
+
+    <main class="main-content">
+      <!-- Report Header -->
+      <div class="project-header">
+          <i class="ri-heart-2-fill"></i>
+          <h1>Detailed Report — For More Information</h1>
+      </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+
+      <!-- Table of Contents Callout -->
+      <div class="callout-box">
+        <div class="callout-header">
+          <i class="ri-list-check"></i>
+          <h3>Table of Contents</h3>
+        </div>
+    
+        <div class="callout-content">
+          <ul class="toc-list">
+            <li><a href="#project-summary">Project Summary</a></li>
+            <li><a href="#project-environment">Project Environment</a></li>
+            <li><a href="#scope-steps">Scope & Project Steps</a></li>
+            <li><a href="#data-sources">Data Sources & Data Gathering</a></li>
+            <li><a href="#main-code">Main Code</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Collapsible Sections -->
+      <div class="section accordion-level-1" id="project-summary">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Summary</h3>
+        </div>
+
+        <div class="section-content">
+          <p>Implemented an end-to-end medical chatbot utilizing a <span>Retrieval-Augmented Generation</span> (<span>RAG</span>) pipeline and proprietary data (The G Encyclopedia of Medicine). The system provides suggestions for diagnosis, medicine, and treatment. Built using modular <span>Python</span>, <span>LangChain</span>, <span>Pinecone Vector DB</span>, and integrated with a functional <span>Flask</span> UI.</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="project-environment">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Environment</h3>
+        </div>
+
+        <div class="section-content">
+          <p><span>Python</span> (modular coding), <span>LangChain</span> (generative framework), <span>Pinecone</span> (Cloud-based Vector DB), <span>Gemini AI LLM</span>, <span>Hugging Face</span> (Embedding Models, 384 dimensions), <span>Flask</span> (UI), <span>Git</span>/<span>GitHub</span> (version control), <span>PyPDFLoader</span>, and recursive text splitter were utilized.</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="scope-steps">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Scope & Project Steps</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Scope</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Developed <span>RAG</span> system using <span>Python</span>, <span>LangChain</span>, <span>Pinecone</span>, <span>Gemini AI</span>, <span>Hugging Face</span>, and <span>Flask</span> for medical suggestions.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Project Steps</h3>
+              </div>
+  
+              <div class="section-content">
+                <li><p>Established a <span>Python</span> virtual environment and set up necessary dependencies listed in requirements.txt</p></li>
+                <li><p>Created a robust, modular folder structure to maintain an organized and scalable code base</p></li>
+                <li><p>Extracted all document contents from the medical PDF using the <span>PyPDFLoader</span></p></li>
+                <li><p>The extracted text was split into 7,020 chunks (size 500, overlap 20) using a text splitter</p></li>
+                <li><p>A <span>Hugging Face</span> embedding model was used to convert text chunks into 384-dimensional vectors</p></li>
+                <li><p>The vectors were stored in a cloud-based <span>Pinecone Vector DB</span> to create the knowledge base/semantic index</p></li>
+                <li><p>Initialized the <span>GeminiAI LLM</span> and linked it with the <span>Pinecone</span> index using the <span>RAG</span> chain</p></li>
+                <li><p>Developed a functional and visually appealing front-end user interface using <span>Flask</span> (<span>Python</span> framework)</p></li>
+                <li><p>Implemented the application endpoint (<span>app.py</span>) for production readiness and cloud deployment planning</p></li>                
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="data-sources">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Data Sources & Data Gathering</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Data Sources</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>The custom dataset source is The G Encyclopedia of Medicine (4505-page PDF). It contains comprehensive medical information including diseases, diagnoses, treatments, and medicine suggestions.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Data Gathering</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>The custom data used for the project was obtained from an entire medical book, specifically The G Encyclopedia of Medicine, which is available as a PDF document spanning approximately 4505 pages. This proprietary dataset contains exhaustive medical information regarding all kinds of disease, diagnosis techniques, appropriate treatment plans, and suggested medicine.</p>
+                <br>
+                <p>The first step in data gathering and ingestion involved loading the PDF document using the <span>PyPDFLoader</span> utility from <span>LangChain</span>. Once the entire content was extracted, the data needed to be prepared for the <span>Large Language Model</span> (<span>LLM</span>), requiring a chunking operation due to the <span>LLM</span>'s fixed input size limitations.</p>
+                <br>
+                <p>A recursive character text splitter was employed to break the extracted text into smaller, manageable text chunks. This process generated a total of 7,020 chunks from the original document. These chunks were then converted into 384-dimensional vector embeddings using an open-source model from the <span>Hugging Face</span> platform. Finally, these embeddings were stored in <span>Pinecone</span>, a cloud-based vector database, which serves as the permanent and scalable knowledge base for the <span>RAG</span> system.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="main-code">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Main Code</h3>
+        </div>
+            
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>1. Count the number of Movies vs TV Shows</h3>
+                </div>
+  
+                <div class="section-content">
+                    <pre><code class="language-python">
+    from flask import Flask, render_template, jsonify, request
+    from src.helper import download_hugging_face_embeddings
+    from langchain_pinecone import PineconeVectorStore
+    from langchain_google_genai import ChatGoogleGenerativeAI
+    from langchain.chains import create_retrieval_chain
+    from langchain.chains.combine_documents import create_stuff_documents_chain
+    from langchain.prompts import ChatPromptTemplate
+    from dotenv import load_dotenv
+    from src.prompt import *
+    import os
+
+    app = Flask(__name__)
+
+    load_dotenv()
+
+    PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
+    GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+
+    os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
+    os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
+
+    embeddings = download_hugging_face_embeddings()
+
+
+    index_name = "medchatbot"
+
+    # Embed each chunk and upsert the embeddings into the Pinecone index
+    docsearch = PineconeVectorStore.from_existing_index(
+        index_name = index_name,
+        embedding = embeddings
+    )
+
+    retriever = docsearch.as_retriever(search_type = "similarity", search_kwargs = {"k": 3})
+
+    llm = ChatGoogleGenerativeAI(
+        model = "models/gemini-2.0-flash",
+        temperature = 0.4,
+        max_output_tokens = 500,
+        google_api_key = GEMINI_API_KEY
+    )
+
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            ("system", system_prompt),
+            ("human", "{input}"),
+        ]
+    )
+
+    question_answer_chain = create_stuff_documents_chain(llm, prompt)
+    rag_chain = create_retrieval_chain(retriever, question_answer_chain)
+
+    @app.route("/")
+    def index():
+        return render_template("chat.html")
+
+    @app.route("/get", methods = ["GET", "POST"])
+    def chat():
+        msg = request.form["msg"]
+        input = msg
+        print(input)
+        response = rag_chain.invoke({"input": msg})
+        print("Response: ", response["answer"])
+        return str(response["answer"])
+
+    if __name__ == "__main__":
+        app.run(host="0.0.0.0", port=8080, debug=True)
+                    </code></pre>
+                </div>
+          </div>
+  
+          <div class="section accordion-level-2" id="schema-2">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>2. Find the most common rating for movies and TV shows</h3>
+                </div>
+
+                <div class="section-content">
+                    <pre><code class="language-python">
+    from langchain.document_loaders import PyPDFLoader, DirectoryLoader
+    from langchain.text_splitter import RecursiveCharacterTextSplitter
+    from langchain.embeddings import HuggingFaceEmbeddings
+    from typing import List
+    from langchain.schema import Document
+
+    # Extract Data from PDF file
+    def load_pdf_file(data):
+        loader = DirectoryLoader(data, 
+                                glob = "*.pdf",
+                                loader_cls=PyPDFLoader)
+        documents = loader.load()
+
+        return documents
+
+    def filter_to_minimal_docs(docs: List[Document]) -> List[Document]:
+        """
+        Given a list of Document objects, return a new list containing only 'source' in metadata and the original page content.
+        """
+        minimal_docs: List[Document] = []
+        for doc in docs:
+            src = doc.metadata.get("source")
+            minimal_docs.append(
+                Document(
+                    page_content=doc.page_content,
+                    metadata={"source": src}
+                )
+            )
+        return minimal_docs
+
+    # Split the Data into Text Chunks
+    def split_text(extracted_data):
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size = 500, chunk_overlap = 20)
+        text_chunks = text_splitter.split_documents(extracted_data)
+
+        return text_chunks
+
+    # Download the Embeddings from Hugging Face
+    def download_hugging_face_embeddings():
+        embeddings = HuggingFaceEmbeddings(model_name = "sentence-transformers/all-MiniLM-L6-v2")
+        return embeddings
+                    </code></pre>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-3">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>3. List all movies released in a specific year (e.g., 2020)</h3>
+                </div>
+
+                <div class="section-content">
+                    <pre><code class="language-python">
+    system_prompt = (
+        "You are an assistant for question-answering tasks. "
+        "Use the following pieces of retrieved context to answer "
+        "the question. If you don't know the answer, say that you "
+        "don't know. Use three sentences maximum and keep the "
+        "answer concise. "
+        "\n\n"
+        "{context}"
+    )
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+    </main>
+  </div>
+  <script type="module" src="../assets/js/reports.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

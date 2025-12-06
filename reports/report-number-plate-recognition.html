@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+  <title>Detailed Report — For More Information</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-title">
+          <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+          <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
+          <span class="separator">/</span>
+          <a href="../projects/project-number-plate-recognition.html">Automatic Number Plate Recognition</a>
+          <span class="separator">/</span>
+          <span class="current">Detailed Report</span>
+        </div>
+        <div class="header-actions">
+          <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <i class="ri-moon-fill"></i>
+          </button>
+          <button class="change-language">Spanish</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="project-hero">
+        <img src="../assets/img/portfolio-2.jpg" alt="Vinyl Record">
+    </div>
+
+    <main class="main-content">
+      <!-- Report Header -->
+      <div class="project-header">
+          <i class="ri-steering-2-fill"></i>
+          <h1>Detailed Report — For More Information</h1>
+      </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+
+      <!-- Table of Contents Callout -->
+      <div class="callout-box">
+        <div class="callout-header">
+          <i class="ri-list-check"></i>
+          <h3>Table of Contents</h3>
+        </div>
+    
+        <div class="callout-content">
+          <ul class="toc-list">
+            <li><a href="#project-summary">Project Summary</a></li>
+            <li><a href="#project-environment">Project Environment</a></li>
+            <li><a href="#scope-steps">Scope & Project Steps</a></li>
+            <li><a href="#data-sources">Data Sources & Data Gathering</a></li>
+            <li><a href="#main-code">Main Code</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Collapsible Sections -->
+      <div class="section accordion-level-1" id="project-summary">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Summary</h3>
+        </div>
+
+        <div class="section-content">
+          <p>Developed a 100% <span>Python</span> <span>ANPR</span> pipeline for video footage. Integrated <span>YOLOv8</span> for car/plate detection, <span>SORT</span> for vehicle tracking, and <span>EasyOCR</span> for robust text recognition. The system assigns unique car IDs across frames and resolves license plate ambiguity by selecting the text with the highest <span>OCR confidence score</span>.</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="project-environment">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Environment</h3>
+        </div>
+
+        <div class="section-content">
+          <p>The environment is 100% <span>Python</span>. Key tools include the <span>YOLOv8</span> object detector (<span>Ultralytics</span>), the <span>SORT</span> object tracking algorithm, and the <span>EasyOCR</span> Python library for text recognition. Image processing utilized <span>OpenCV</span> (<span>CV2</span>).</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="scope-steps">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Scope & Project Steps</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Scope</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>End-to-end <span>ANPR</span> system focused on detecting, tracking, and reading UK license plates (<span>LLNNLLL</span>) in highway video.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Project Steps</h3>
+              </div>
+  
+              <div class="section-content">
+                <li><p>Load two <span>YOLOv8</span> models: one for car detection (<span>COCO</span>) and one for license plate detection</p></li>
+                <li><p>Read video frames sequentially and detect vehicles using the <span>COCO</span> model</p></li>
+                <li><p>Implement <span>SORT</span> object tracking to assign unique, persistent IDs to detected vehicles</p></li>
+                <li><p>Detect license plates and associate each plate bounding box with its respective tracked car</p></li>
+                <li><p>Crop the plate image and apply preprocessing: grayscale conversion and thresholding</p></li>
+                <li><p>Read text using <span>EasyOCR</span>; validate and correct common character confusions (e.g., S/5, O/0)</p></li>
+                <li><p>Structure results (ID, bounding box, text, scores) into a dictionary keyed by frame number</p></li>
+                <li><p>Write the complete structured results to a <span>CSV</span> output file for storage and visualization</p></li>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="data-sources">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Data Sources & Data Gathering</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Data Sources</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Primary data is a highway video with many cars, featuring a very frontal view of the vehicles and license plates. The license plate detector model was trained externally using a linked dataset.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Data Gathering</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Data was gathered from an input video file (<span>sample.mp4</span>) by reading frames sequentially using <span>OpenCV</span>/<span>CV2</span>. Two separate object detection models were used per frame: A pre-trained <span>COCO</span> model was utilized to detect general vehicles (such as cars, buses, and trucks), and a custom-trained YOLOv8 model was used to detect the license plates specifically.</p>
+                <br>
+                <p>The <span>SORT</span> algorithm was applied to the vehicle detections to gather persistent tracking data, assigning unique car IDs that identify the vehicle across multiple frames.</p>
+                <br>
+                <p>For license plate text, the plate image was cropped, pre-processed (converted to grayscale and thresholded) to simplify the image, and then the text and confidence score were gathered using the <span>EasyOCR</span> library. This raw detection and <span>OCR</span> data were then filtered for vehicles, associated with a car ID, validated against the specific UK format (two letters, two numbers, three letters), and structured into a dictionary keyed by the frame number before final output to a <span>CSV file</span>. Missing bounding box data in frames where the license plate was not successfully read was handled via external data interpolation to ensure stable visualization.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="main-code">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Main Code</h3>
+        </div>
+            
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>main.py</h3>
+                </div>
+  
+                <div class="section-content">
+                    <pre><code class="language-python">
+  import os
+  os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
+  from ultralytics import YOLO
+  import cv2
+  from sort.sort import Sort
+  import numpy as np
+  from util import get_car, read_license_plate, write_csv
+
+  results = {}
+
+  mot_tracker = Sort()
+
+  # load models
+  coco_model = YOLO('yolov8n.pt')  # Pre-trained COCO model for vehicle detection
+  license_plate_detector = YOLO('./models/license_plate_detector.pt')  # Custom model for license plate detection
+
+  # load video
+  cap = cv2.VideoCapture('./data/sample.mp4')
+
+  vehicles = [2, 3, 5, 7]  # COCO class IDs for vehicles: car, motorcycle, bus, truck
+
+  # read frames
+  frame_num = -1
+  ret = True
+  while ret:
+      frame_num += 1
+      ret, frame = cap.read()
+      if ret:
+          results[frame_num] = {}
+
+          # detect vehicles
+          detections = coco_model(frame)[0]
+          detections_ = []
+          for detection in detections.boxes.data.tolist():
+              x1, y1, x2, y2, score, class_id = detection
+              if int(class_id) in vehicles:
+                  detections_.append([x1, y1, x2, y2, score])
+
+          # track vehicles
+          track_ids = mot_tracker.update(np.asarray(detections_))
+
+          # detect license plates
+          license_plates = license_plate_detector(frame)[0]
+          for license_plate in license_plates.boxes.data.tolist():
+              x1, y1, x2, y2, score, class_id = license_plate
+
+              # assign plates to vehicles
+              xcar1, ycar1, xcar2, ycar2, car_id = get_car(license_plate, track_ids)
+
+              if car_id != -1:
+
+                  # crop license plates
+                  license_plate_crop = frame[int(y1):int(y2), int(x1):int(x2), :]
+
+                  # process cropped plates
+                  license_plate_crop_gray = cv2.cvtColor(license_plate_crop, cv2.COLOR_BGR2GRAY)
+                  _, license_plate_crop_thresh = cv2.threshold(license_plate_crop_gray, 64, 255, cv2.THRESH_BINARY_INV)
+
+                  #cv2.imshow('original_crop', license_plate_crop)
+                  #cv2.imshow('thresh_crop', license_plate_crop_thresh)
+                  #cv2.waitKey(0)
+
+                  # read license plate numbers
+                  license_plate_text, license_plate_text_score = read_license_plate(license_plate_crop_thresh)
+
+                  if license_plate_text is not None:
+                      results[frame_num][car_id] = {
+                          'car': {
+                              'bbox': [xcar1, ycar1, xcar2, ycar2]
+                          },
+                          'license_plate': {
+                              'bbox': [x1, y1, x2, y2],
+                              'text': license_plate_text,
+                              'bbox_score': score,
+                              'text_score': license_plate_text_score
+                          }
+                      }
+
+  # display results
+  write_csv(results, './test.csv')
+                    </code></pre>
+                </div>
+          </div>
+  
+          <div class="section accordion-level-2" id="schema-2">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>util.py</h3>
+                </div>
+
+                <div class="section-content">
+                    <pre><code class="language-python">
+  import easyocr
+  import string
+
+  # Initialize EasyOCR reader
+  reader = easyocr.Reader(['en'], gpu=True)
+
+  # Mapping dictionaries for character conversion
+  dict_char_to_int = { 
+      'O': '0',
+      'I': '1',
+      'J': '3',
+      'A': '4',
+      'G': '6',
+      'S': '5'
+  }
+
+  dict_int_to_char = {
+      '0' : 'O',
+      '1' : 'I',
+      '3' : 'J',
+      '4' : 'A',
+      '6' : 'G',
+      '5' : 'S'
+  }
+
+
+  def write_csv(results, output_path):
+      """
+      Write the results to a CSV file.
+
+      Args:
+          results (dict): A dictionary of results to write to the CSV.
+          output_path (str): The path to the output CSV file.
+      """
+      with open(output_path, 'w') as f:
+          f.write('{},{},{},{},{},{},{}\n'.format('frame_num', 'car_id', 'car_bbox', 'license_plate_bbox', 'license_plate_bbox_score', 'license_number', 'license_number_score'))
+
+          for frame_num in results.keys():
+              for car_id in results[frame_num].keys():
+                  print(results[frame_num][car_id])
+                  if 'car' in results[frame_num][car_id].keys() and \
+                      'license_plate' in results[frame_num][car_id].keys() and \
+                      'text' in results[frame_num][car_id]['license_plate'].keys():
+                      f.write('{},{},{},{},{},{},{}\n'.format(frame_num, 
+                                                              car_id, 
+                                                              '[{} {} {} {}]'.format(
+                                                                  results[frame_num][car_id]['car']['bbox'][0],
+                                                                  results[frame_num][car_id]['car']['bbox'][1],
+                                                                  results[frame_num][car_id]['car']['bbox'][2],
+                                                                  results[frame_num][car_id]['car']['bbox'][3]),
+                                                              '[{} {} {} {}]'.format(
+                                                                  results[frame_num][car_id]['license_plate']['bbox'][0],
+                                                                  results[frame_num][car_id]['license_plate']['bbox'][1],
+                                                                  results[frame_num][car_id]['license_plate']['bbox'][2],
+                                                                  results[frame_num][car_id]['license_plate']['bbox'][3]),
+                                                              results[frame_num][car_id]['license_plate']['bbox_score'],
+                                                              results[frame_num][car_id]['license_plate']['text'],
+                                                              results[frame_num][car_id]['license_plate']['text_score'])
+                      )
+          f.close()
+
+  def license_complies_format(text):
+      """
+      Check if the license plate text complies with a specific format.
+
+      Args:
+          text (str): The license plate text to check.
+      
+      Returns:
+          bool: True if the text complies with the format, False otherwise.
+      """
+
+      if len(text) != 7:
+          return False
+
+      if (text[0] in string.ascii_uppercase or text[0] in dict_int_to_char.keys()) and \
+        (text[1] in string.ascii_uppercase or text[1] in dict_int_to_char.keys()) and \
+        (text[2] in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] or text[2] in dict_char_to_int.keys()) and \
+        (text[3] in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] or text[3] in dict_char_to_int.keys()) and \
+        (text[4] in string.ascii_uppercase or text[4] in dict_int_to_char.keys()) and \
+        (text[5] in string.ascii_uppercase or text[5] in dict_int_to_char.keys()) and \
+        (text[6] in string.ascii_uppercase or text[6] in dict_int_to_char.keys()):
+          return True
+      else:
+          return False
+      
+  def format_license(text):
+      """
+      Format the license plate text by converting ambiguous characters.
+
+      Args:
+          text (str): The license plate text to format.
+      
+      Returns:
+          str: The formatted license plate text.
+      """
+
+      formatted_text = ''
+      mapping = {0: dict_int_to_char, 1: dict_int_to_char, 4: dict_int_to_char, 5: dict_int_to_char, 6: dict_int_to_char,
+                2: dict_char_to_int, 3: dict_char_to_int}
+      
+      for j in [0, 1, 2, 3, 4, 5, 6]:
+          if text[j] in mapping[j].keys():
+              formatted_text += mapping[j][text[j]]
+          else:
+              formatted_text += text[j]
+
+      return formatted_text
+
+  def read_license_plate(license_plate_crop):
+      """
+      Read the license plate number from the cropped license plate image.
+
+      Args:
+          license_plate_crop (PIL.Image.Image): Cropped image of the license plate.
+      Returns:
+          tuple: A tuple containing the license plate number as a string and the confidence score as a float.
+      """
+
+      detections = reader.readtext(license_plate_crop)
+
+      for detection in detections:
+          bbox, text, score = detection
+
+          text = text.upper().replace(' ', '')
+
+          if license_complies_format(text):
+              return format_license(text), score
+
+      return None, None
+
+  def get_car(license_plate, vehicle_track_ids):
+      """
+      Retrieve the vehicle coordinates and ID based on the license plate coordinates.
+
+      Args:
+          license_plate (tuple): A tuple containing the coordinates of the license plate (x1, y1, x2, y2, score, class_id).
+          vehicle_track_ids (list): A list of tracked vehicles with their coordinates and IDs.
+
+      Returns:
+          tuple: A tuple containing the vehicle coordinates (x1, y1, x2, y2) and ID.
+      """
+
+      x1, y1, x2, y2, score, class_id = license_plate
+
+      found_it = False
+      for j in range(len(vehicle_track_ids)):
+          xcar1, ycar1, xcar2, ycar2, car_id = vehicle_track_ids[j]
+
+          if x1 > xcar1 and y1 > ycar1 and x2 < xcar2 and y2 < ycar2:
+              car_idx = j
+              found_it = True
+              break
+
+      if found_it:
+          return vehicle_track_ids[car_idx]
+
+      return -1, -1, -1, -1, -1
+                    </code></pre>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-3">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>visualize.py</h3>
+                </div>
+
+                <div class="section-content">
+                    <pre><code class="language-python">
+  import ast
+
+  import cv2
+  import numpy as np
+  import pandas as pd
+
+
+  def draw_border(img, top_left, bottom_right, color=(0, 255, 0), thickness=10, line_length_x=200, line_length_y=200):
+      x1, y1 = top_left
+      x2, y2 = bottom_right
+
+      cv2.line(img, (x1, y1), (x1, y1 + line_length_y), color, thickness)  #-- top-left
+      cv2.line(img, (x1, y1), (x1 + line_length_x, y1), color, thickness)
+
+      cv2.line(img, (x1, y2), (x1, y2 - line_length_y), color, thickness)  #-- bottom-left
+      cv2.line(img, (x1, y2), (x1 + line_length_x, y2), color, thickness)
+
+      cv2.line(img, (x2, y1), (x2 - line_length_x, y1), color, thickness)  #-- top-right
+      cv2.line(img, (x2, y1), (x2, y1 + line_length_y), color, thickness)
+
+      cv2.line(img, (x2, y2), (x2, y2 - line_length_y), color, thickness)  #-- bottom-right
+      cv2.line(img, (x2, y2), (x2 - line_length_x, y2), color, thickness)
+
+      return img
+
+
+  results = pd.read_csv('./test_interpolated.csv')
+
+  # load video
+  video_path = './data/sample.mp4'
+  cap = cv2.VideoCapture(video_path)
+
+  fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Specify the codec
+  fps = cap.get(cv2.CAP_PROP_FPS)
+  width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+  height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+  out = cv2.VideoWriter('./out.mp4', fourcc, fps, (width, height))
+
+  license_plate = {}
+  for car_id in np.unique(results['car_id']):
+      max_ = np.amax(results[results['car_id'] == car_id]['license_number_score'])
+      license_plate[car_id] = {'license_crop': None,
+                              'license_plate_number': results[(results['car_id'] == car_id) &
+                                                              (results['license_number_score'] == max_)]['license_number'].iloc[0]}
+      cap.set(cv2.CAP_PROP_POS_FRAMES, results[(results['car_id'] == car_id) &
+                                              (results['license_number_score'] == max_)]['frame_num'].iloc[0])
+      ret, frame = cap.read()
+
+      x1, y1, x2, y2 = ast.literal_eval(results[(results['car_id'] == car_id) &
+                                                (results['license_number_score'] == max_)]['license_plate_bbox'].iloc[0].replace('[ ', '[').replace('   ', ' ').replace('  ', ' ').replace(' ', ','))
+
+      license_crop = frame[int(y1):int(y2), int(x1):int(x2), :]
+      license_crop = cv2.resize(license_crop, (int((x2 - x1) * 400 / (y2 - y1)), 400))
+
+      license_plate[car_id]['license_crop'] = license_crop
+
+
+  frame_num = -1
+
+  cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+
+  # read frames
+  ret = True
+  while ret:
+      ret, frame = cap.read()
+      frame_num += 1
+      if ret:
+          df_ = results[results['frame_num'] == frame_num]
+          for row_indx in range(len(df_)):
+              # draw car
+              car_x1, car_y1, car_x2, car_y2 = ast.literal_eval(df_.iloc[row_indx]['car_bbox'].replace('[ ', '[').replace('   ', ' ').replace('  ', ' ').replace(' ', ','))
+              draw_border(frame, (int(car_x1), int(car_y1)), (int(car_x2), int(car_y2)), (0, 255, 0), 25,
+                          line_length_x=200, line_length_y=200)
+
+              # draw license plate
+              x1, y1, x2, y2 = ast.literal_eval(df_.iloc[row_indx]['license_plate_bbox'].replace('[ ', '[').replace('   ', ' ').replace('  ', ' ').replace(' ', ','))
+              cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 0, 255), 12)
+
+              # crop license plate
+              license_crop = license_plate[df_.iloc[row_indx]['car_id']]['license_crop']
+
+              H, W, _ = license_crop.shape
+
+              try:
+                  frame[int(car_y1) - H - 100:int(car_y1) - 100,
+                        int((car_x2 + car_x1 - W) / 2):int((car_x2 + car_x1 + W) / 2), :] = license_crop
+
+                  frame[int(car_y1) - H - 400:int(car_y1) - H - 100,
+                        int((car_x2 + car_x1 - W) / 2):int((car_x2 + car_x1 + W) / 2), :] = (255, 255, 255)
+
+                  (text_width, text_height), _ = cv2.getTextSize(
+                      license_plate[df_.iloc[row_indx]['car_id']]['license_plate_number'],
+                      cv2.FONT_HERSHEY_SIMPLEX,
+                      4.3,
+                      17)
+
+                  cv2.putText(frame,
+                              license_plate[df_.iloc[row_indx]['car_id']]['license_plate_number'],
+                              (int((car_x2 + car_x1 - text_width) / 2), int(car_y1 - H - 250 + (text_height / 2))),
+                              cv2.FONT_HERSHEY_SIMPLEX,
+                              4.3,
+                              (0, 0, 0),
+                              17)
+
+              except:
+                  pass
+
+          out.write(frame)
+          frame = cv2.resize(frame, (1280, 720))
+
+          # cv2.imshow('frame', frame)
+          # cv2.waitKey(0)
+
+  out.release()
+  cap.release()
+                    </code></pre>
+                </div>
+            </div>
+
+        <div class="section accordion-level-2" id="schema-3">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>add_missing_data.py</h3>
+                </div>
+
+                <div class="section-content">
+                    <pre><code class="language-python">
+  import csv
+  import numpy as np
+  from scipy.interpolate import interp1d
+
+
+  def interpolate_bounding_boxes(data):
+      # Extract necessary data columns from input data
+      frame_numbers = np.array([int(row['frame_num']) for row in data])
+      car_ids = np.array([int(float(row['car_id'])) for row in data])
+      car_bboxes = np.array([list(map(float, row['car_bbox'][1:-1].split())) for row in data])
+      license_plate_bboxes = np.array([list(map(float, row['license_plate_bbox'][1:-1].split())) for row in data])
+
+      interpolated_data = []
+      unique_car_ids = np.unique(car_ids)
+      for car_id in unique_car_ids:
+
+          frame_numbers_ = [p['frame_num'] for p in data if int(float(p['car_id'])) == int(float(car_id))]
+          print(frame_numbers_, car_id)
+
+          # Filter data for a specific car ID
+          car_mask = car_ids == car_id
+          car_frame_numbers = frame_numbers[car_mask]
+          car_bboxes_interpolated = []
+          license_plate_bboxes_interpolated = []
+
+          first_frame_number = car_frame_numbers[0]
+          last_frame_number = car_frame_numbers[-1]
+
+          for i in range(len(car_bboxes[car_mask])):
+              frame_number = car_frame_numbers[i]
+              car_bbox = car_bboxes[car_mask][i]
+              license_plate_bbox = license_plate_bboxes[car_mask][i]
+
+              if i > 0:
+                  prev_frame_number = car_frame_numbers[i-1]
+                  prev_car_bbox = car_bboxes_interpolated[-1]
+                  prev_license_plate_bbox = license_plate_bboxes_interpolated[-1]
+
+                  if frame_number - prev_frame_number > 1:
+                      # Interpolate missing frames' bounding boxes
+                      frames_gap = frame_number - prev_frame_number
+                      x = np.array([prev_frame_number, frame_number])
+                      x_new = np.linspace(prev_frame_number, frame_number, num=frames_gap, endpoint=False)
+                      interp_func = interp1d(x, np.vstack((prev_car_bbox, car_bbox)), axis=0, kind='linear')
+                      interpolated_car_bboxes = interp_func(x_new)
+                      interp_func = interp1d(x, np.vstack((prev_license_plate_bbox, license_plate_bbox)), axis=0, kind='linear')
+                      interpolated_license_plate_bboxes = interp_func(x_new)
+
+                      car_bboxes_interpolated.extend(interpolated_car_bboxes[1:])
+                      license_plate_bboxes_interpolated.extend(interpolated_license_plate_bboxes[1:])
+
+              car_bboxes_interpolated.append(car_bbox)
+              license_plate_bboxes_interpolated.append(license_plate_bbox)
+
+          for i in range(len(car_bboxes_interpolated)):
+              frame_number = first_frame_number + i
+              row = {}
+              row['frame_num'] = str(frame_number)
+              row['car_id'] = str(car_id)
+              row['car_bbox'] = ' '.join(map(str, car_bboxes_interpolated[i]))
+              row['license_plate_bbox'] = ' '.join(map(str, license_plate_bboxes_interpolated[i]))
+
+              if str(frame_number) not in frame_numbers_:
+                  # Imputed row, set the following fields to '0'
+                  row['license_plate_bbox_score'] = '0'
+                  row['license_number'] = '0'
+                  row['license_number_score'] = '0'
+              else:
+                  # Original row, retrieve values from the input data if available
+                  original_row = [p for p in data if int(p['frame_num']) == frame_number and int(float(p['car_id'])) == int(float(car_id))][0]
+                  row['license_plate_bbox_score'] = original_row['license_plate_bbox_score'] if 'license_plate_bbox_score' in original_row else '0'
+                  row['license_number'] = original_row['license_number'] if 'license_number' in original_row else '0'
+                  row['license_number_score'] = original_row['license_number_score'] if 'license_number_score' in original_row else '0'
+
+              interpolated_data.append(row)
+
+      return interpolated_data
+
+
+  # Load the CSV file
+  with open('test.csv', 'r') as file:
+      reader = csv.DictReader(file)
+      data = list(reader)
+
+  # Interpolate missing data
+  interpolated_data = interpolate_bounding_boxes(data)
+
+  # Write updated data to a new CSV file
+  header = ['frame_num', 'car_id', 'car_bbox', 'license_plate_bbox', 'license_plate_bbox_score', 'license_number', 'license_number_score']
+  with open('test_interpolated.csv', 'w', newline='') as file:
+      writer = csv.DictWriter(file, fieldnames=header)
+      writer.writeheader()
+      writer.writerows(interpolated_data)
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+    </main>
+  </div>
+  <script type="module" src="../assets/js/reports.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

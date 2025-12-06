@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+  <title>Detailed Report — For More Information</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-title">
+          <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+          <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
+          <span class="separator">/</span>
+          <a href="../projects/project-medical-chatbot.html">Unsupervised Music Track Clustering</a>
+          <span class="separator">/</span>
+          <span class="current">Detailed Report</span>
+        </div>
+        <div class="header-actions">
+          <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <i class="ri-moon-fill"></i>
+          </button>
+          <button class="change-language">Spanish</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="project-hero">
+        <img src="../assets/img/portfolio-1.jpg" alt="Vinyl Record">
+    </div>
+
+    <main class="main-content">
+      <!-- Report Header -->
+      <div class="project-header">
+          <i class="ri-music-2-fill"></i>
+          <h1>Detailed Report — For More Information</h1>
+      </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+
+      <!-- Table of Contents Callout -->
+      <div class="callout-box">
+        <div class="callout-header">
+          <i class="ri-list-check"></i>
+          <h3>Table of Contents</h3>
+        </div>
+    
+        <div class="callout-content">
+          <ul class="toc-list">
+            <li><a href="#project-summary">Project Summary</a></li>
+            <li><a href="#project-environment">Project Environment</a></li>
+            <li><a href="#scope-steps">Scope & Project Steps</a></li>
+            <li><a href="#acoustic-descriptors">Fundamental Acoustic Descriptors</a></li>
+            <li><a href="#implemented-algorithms">Implemented Algorithms</a></li>
+            <li><a href="#combined-metrics">Combined Metrics (Evaluation Framework)</a></li>            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Collapsible Sections -->
+      <div class="section accordion-level-1" id="project-summary">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Summary</h3>
+        </div>
+
+        <div class="section-content">
+          <p>AI system for automatic music clustering using unsupervised ML on 196 acoustic features (<span>MFCC</span>, <span>spectral</span>, <span>chroma</span>) extracted from GTZAN. We compared four algorithms. <span>DBSCAN</span> achieved the highest score (0.563) across 18 clusters, confirming the viability of the approach for massive, unbiased music catalog organization.</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="project-environment">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Environment</h3>
+        </div>
+
+        <div class="section-content">
+          <p>Developed in <span>Python</span> 3.10.13 using <span>Jupyter Notebook</span>. Key libraries: <span>Librosa</span> (audio features), <span>Pandas</span>/<span>NumPy</span> (data manipulation), <span>Scikit-learn</span> (ML models), and specialized clustering libraries like <span>HDBSCAN</span>.</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="scope-steps">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Scope & Project Steps</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Scope</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Automatic organization of music catalogs via unsupervised clustering on 196 acoustic features extracted from audio signals.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Project Steps</h3>
+              </div>
+  
+              <div class="section-content">
+                <li><p>Comprehensive literature review (<span>MIR</span>, clustering, audio features)</p></li>
+                <li><p>GTZAN dataset curation and validation (999 valid samples)</p></li>
+                <li><p>Feature extraction pipeline design (196 acoustic features per track)</p></li>
+                <li><p>Implementation and optimization of four clustering models (<span>DBSCAN</span>, <span>K-Means</span>, etc.)</p></li>
+                <li><p>Evaluation using combined metrics (<span>Silhouette</span>, <span>ARI</span>, combined score 0.563)</p></li>             
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="acoustic-descriptors">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Fundamental Acoustic Descriptors</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Mel-Frequency Cepstral Coefficients (MFCC)</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>These coefficients simulate the non-linear response of the human ear using filter banks on the Mel scale. <span>MFCCs</span> are fundamental features specifically designed to capture the timbral characteristics (spectral envelope) of the sound. They are generated by the de-correlation of Mel spectral vectors using the discrete cosine transform.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Chroma Features</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>A 12-dimensional vector representation that displays the relative intensity in each of the twelve semitones of a chromatic scale. These features are crucial for representing the harmonic content and tonal structure of the music, demonstrating robustness against timbre variations.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Spectral Centroid</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>This feature represents the "center of gravity" of the spectrum, which is directly related to auditory brightness. Higher values of the spectral centroid indicate that the signal's energy is more concentrated in higher frequencies.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Spectral Rolloff</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Defined as the frequency below which a specified proportion (typically 85-95%) of the total spectral energy is accumulated. It provides valuable information on the energy distribution across frequencies and is used to distinguish between harmonic and noisy sounds.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Zero Crossing Rate (ZCR)</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Quantifies the number of times the audio signal crosses the zero amplitude level within a specified temporal window. <span>ZCR</span> contributes information about the textural characteristics of the signal and is highly sensitive to "noise" in the audio; higher noise tends to increase the <span>ZCR</span> value.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="implemented-algorithms">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Implemented Algorithms</h3>
+        </div>
+
+        <div class="section-content">
+          <p>The project implemented and optimized multiple clustering algorithms adapted specifically for the musical domain:</p>
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>K-Means</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Implemented with specific optimizations, including <span>K-Means++</span> initialization to improve convergence and reduce sensitivity to random starting points. The elbow method and silhouette analysis were used to determine the optimal number of clusters (k). K-Means showed consistency and stability across configurations, with an average performance of 0.420 on the combined score.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>DBSCAN (Density-Based Spatial Clustering of Applications with Noise)</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Configured to identify clusters of variable density, a characteristic particularly useful for detecting musical subgenres and atypical patterns. Systematic optimization of the parameters epsilon (ϵ) and MinPts was performed using grid search.</p>
+                <br>
+                <p>Key Finding: <span>DBSCAN</span> emerged as the most effective algorithm, achieving the highest combined score of 0.563 with 18 clusters. This superiority suggests that musical patterns exhibit variable density characteristics which are better captured by density-based algorithms than by traditional centroidal methods.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise)</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Implemented as a hierarchical extension of <span>DBSCAN</span>. <span>HDBSCAN</span> allows for the automatic identification of clusters with variable densities, eliminating the need to specify the ϵ parameter. HDBSCAN achieved the second-best result with a combined score of 0.458 (generating 5 clusters).</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Gaussian Mixture Model (GMM)</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Implemented to model clusters with complex Gaussian shapes. <span>GMM</span> included the capability for automatic determination of the number of components using Bayesian Information Criterion (BIC) and Akaike Information Criterion (AIC)</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="combined-metrics">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Combined Metrics (Evaluation Framework)</h3>
+        </div>
+
+        <div class="section-content">
+            <p>A comprehensive evaluation framework was established to quantify the quality of the musical clustering from multiple perspectives, combining traditional clustering metrics with domain-specific evaluations. This framework resulted in a Combined Score, designed to balance internal coherence (quality) with external correspondence (relevance).</p>
+            <p>The combined score is calculated using the following weighted formula:</p>
+            <p>score=(0.4*sil)+(0.3*ari)+(0.3*k_pen)</p>
+            <p>Where:</p>
+            <p>sil (<span>Silhouette Score</span>): A metric of intrinsic quality that measures how well each data point is assigned to its own cluster and separated from neighboring clusters. It accounts for 40% of the total score. Scores range from -1 to +1, where values close to +1 indicate a span assignment.</p>
+            <p>ari (<span>Adjusted Rand Index</span>): An extrinsic metric that measures the similarity between the resulting clustering assignments and the actual known musical genres (the real labels of the GTZAN dataset). It accounts for 30% of the total score. ARI values range between -0.5 and 1.0, with 1.0 indicating perfect clustering.</p>
+            <p>k_pen (K-Penalty Factor): A factor based on the number of clusters (k_pen=n_clust/target_k) that contributes to the adequacy of the number of clusters. It accounts for 30% of the total score.</p>
+            <p>This weighted combination provides an integral evaluation that captures both the internal coherence of the musical clusters and their correspondence with established genre categories, making it especially valuable for automatic analysis of large music catalogs. <span>DBSCAN</span> achieved the highest combined evaluation score of 0.563 with this framework.</p>
+          </div>
+        </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+    </main>
+  </div>
+  <script type="module" src="../assets/js/reports.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+  <title>Detailed Report — For More Information</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-title">
+          <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+          <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
+          <span class="separator">/</span>
+          <a href="../projects/project-netflix-content-analysis.html">Netflix Movies and TV Shows Data Analysis</a>
+          <span class="separator">/</span>
+          <span class="current">Detailed Report</span>
+        </div>
+        <div class="header-actions">
+          <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <i class="ri-moon-fill"></i>
+          </button>
+          <button class="change-language">Spanish</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="project-hero">
+        <img src="../assets/img/portfolio-5.jpg" alt="Vinyl Record">
+    </div>
+
+    <main class="main-content">
+      <!-- Report Header -->
+      <div class="project-header">
+          <i class="ri-movie-2-fill"></i>
+          <h1>Detailed Report — For More Information</h1>
+      </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+
+      <!-- Table of Contents Callout -->
+      <div class="callout-box">
+        <div class="callout-header">
+          <i class="ri-list-check"></i>
+          <h3>Table of Contents</h3>
+        </div>
+    
+        <div class="callout-content">
+          <ul class="toc-list">
+            <li><a href="#project-summary">Project Summary</a></li>
+            <li><a href="#project-environment">Project Environment</a></li>
+            <li><a href="#scope-steps">Scope & Project Steps</a></li>
+            <li><a href="#data-sources">Data Sources & Data Gathering</a></li>
+            <li><a href="#schema">Schema</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Collapsible Sections -->
+      <div class="section accordion-level-1" id="project-summary">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Summary</h3>
+        </div>
+
+        <div class="section-content">
+          <p>Advanced SQL analysis of 8,807 Netflix titles, solving 15 complex business problems. The methodology involved setting up a PostgreSQL database, defining the schema, manipulating complex text fields using array and string functions (UNNEST, STRING_TO_ARRAY), and applying Window Functions.</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="project-environment">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Environment</h3>
+        </div>
+
+        <div class="section-content">
+          <p>The core tools used were PostgreSQL for the database and querying, with PG Admin 4 serving as the management interface. Initial data inspection was conducted in Excel. The final project was published on GitHub.</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="scope-steps">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Scope & Project Steps</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Scope</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>Solve 15 medium-to-advanced business problems using complex SQL queries on 8,807 Netflix records.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Project Steps</h3>
+              </div>
+  
+              <div class="section-content">
+                <li><p>Acquired the "Netflix movies and TV shows" dataset from the Kaggle platform</p></li>
+                <li><p>Performed initial data exploration in Excel to verify column types and lengths</p></li>
+                <li><p>Created the database and defined the table schema in PostgreSQL using PG Admin 4</p></li>
+                <li><p>Defined precise data types, calculating VARCHAR limits for long text columns</p></li>
+                <li><p>Imported the data, addressing import failures by correcting the VARCHAR length</p></li>
+                <li><p>Confirmed successful import, verifying the existence of 8,807 total records</p></li>
+                <li><p>Developed complex SQL solutions for 15 specified business problems</p></li>
+                <li><p>Employed advanced techniques like UNNEST to split multi-value columns (countries, cast)</p></li>
+                <li><p>Published the documented project and code solutions on a GitHub repository</p></li>                
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="data-sources">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Data Sources & Data Gathering</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Data Sources</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>The dataset, titled "Netflix movies and TV shows," was downloaded from Kaggle. It contains 8,808 records (titles) with details on show ID, type (movie/TV show), director, cast, country, release date, rating, duration, genre, and descriptions.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Data Gathering</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>The data gathering process began with locating and downloading the required dataset, "Netflix movies and TV shows," from the **`Kaggle`** website. This dataset was provided as a compressed (zipped) file, which was then unzipped. Link [HERE](https://www.kaggle.com/datasets/shivamb/netflix-shows).</p>
+                <br>
+                <p>Following the download, the file was opened in **`Excel`** for a critical initial exploration. This phase was essential for inspecting the characteristics of the data, especially the potential lengths of text fields such as title, director, cast, and descriptions. The check revealed that certain columns contained extremely long character strings (e.g., director up to 208 characters, cast up to 771 characters, and description up to 250 characters), which directly influenced the subsequent database schema design. The dataset was confirmed to have a total of 8,808 rows.</p>
+                <br>
+                <p>The next step involved setting up the target database in **`PostgreSQL`** and defining the table structure. During schema creation, appropriate **`VARCHAR`** limits were set for all columns based on the **`Excel`** analysis to prevent truncation errors. Subsequently, the data was imported into the PostgreSQL environment via PG Admin 4. An initial import attempt failed due to an insufficient **`VARCHAR`** limit defined for the 'listed in' (genre) column. This was resolved by using the **`DROP TABLE`** command, increasing the column limit (from 25 to 100 characters), recreating the table, and re-running the import process successfully. This ensured the availability of all 8,807 final records for analysis.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="schema">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Schema</h3>
+        </div>
+
+        <div class="section-content">
+          <pre><code class="language-sql">
+  DROP TABLE IF EXISTS netflix;
+  CREATE TABLE netflix
+  (
+    show_id 		VARCHAR(6),
+    type 			VARCHAR(10),
+    title 			VARCHAR(150),
+    director 		VARCHAR(208), 
+    casts 			VARCHAR(1000),
+    country 		VARCHAR(150),
+    date_added 		VARCHAR(50),
+    release_year 	INT,
+    rating 			VARCHAR(10),
+    duration 		VARCHAR(15),
+    listed_in 		VARCHAR(100),
+    description		VARCHAR(250)
+  );
+          </code></pre>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="solutions">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Solutions</h3>
+        </div>
+            
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>1. Count the number of Movies vs TV Shows</h3>
+                </div>
+  
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT
+        type,
+        COUNT(*) AS total_content
+    FROM netflix
+    GROUP BY type;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>type</th>
+                                            <th>total_content</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Movie</td>
+                                            <td>6131</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TV Show</td>
+                                            <td>2676</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+  
+          <div class="section accordion-level-2" id="schema-2">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>2. Find the most common rating for movies and TV shows</h3>
+              </div>
+
+              <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT
+        type,
+        rating
+    FROM
+    (
+        SELECT
+            type,
+            rating,
+            COUNT(),
+            RANK() OVER(PARTITION BY type ORDER BY COUNT() DESC) AS ranking
+        FROM netflix
+        GROUP BY 1, 2
+    ) AS t1
+    WHERE
+        ranking = 1;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>type</th>
+                                            <th>rating</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Movie</td>
+                                            <td>TV-MA</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TV Show</td>
+                                            <td>TV-MA</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-3">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>3. List all movies released in a specific year (e.g., 2020)</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT * FROM netflix
+    WHERE
+        type = 'Movie'
+        AND
+        release_year = 2020;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>show_id</th>
+                                            <th>type</th>
+                                            <th>title</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>s1</td>
+                                            <td>Movie</td>
+                                            <td>Dick Johnson Is Dead</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s17</td>
+                                            <td>Movie</td>
+                                            <td>Europe's Most Dangerous Man: Otto Skorzeny in Spain</td>
+                                        </tr>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s7595</td>
+                                            <td>Movie</td>
+                                            <td>Norm of the North: Family Vacation</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s8100</td>
+                                            <td>Movie</td>
+                                            <td>Straight Up</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total rows: 517</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-4">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>4. Find the top 5 countries with the most content on Netflix</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT
+        TRIM(UNNEST(STRING_TO_ARRAY(country, ','))) AS new_country,
+        COUNT(show_id) AS total_content
+    FROM netflix
+    GROUP BY 1
+    ORDER BY 2 DESC
+    LIMIT 5;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>new_country</th>
+                                            <th>total_content</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>United States</td>
+                                            <td>3690</td>
+                                        </tr>
+                                        <tr>
+                                            <td>India</td>
+                                            <td>1046</td>
+                                        </tr>
+                                        <tr>
+                                            <td>United Kingdom</td>
+                                            <td>806</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Canada</td>
+                                            <td>445</td>
+                                        </tr>
+                                        <tr>
+                                            <td>France</td>
+                                            <td>393</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-5">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>5. Identify the longest movie</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT
+        type,
+        title,
+        SPLIT_PART (duration, ' ', 1) :: INT 
+    FROM
+        netflix
+    WHERE type IN ('Movie') AND duration IS NOT NULL
+    ORDER BY 3 DESC
+    LIMIT 1;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                <thead>
+                                    <tr>
+                                        <th>type</th>
+                                        <th>title</th>
+                                        <th>split_part</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Movie</td>
+                                        <td>Black Mirror: Bandersnatch</td>
+                                        <td>312</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-6">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>6. Find content added in the last 5 years</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT * FROM netflix
+    WHERE
+        TO_DATE(date_added, 'Month DD, YYYY') >= CURRENT_DATE - INTERVAL '5 years';
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>show_id</th>
+                                            <th>type</th>
+                                            <th>date_added</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>s1</td>
+                                            <td>Movie</td>
+                                            <td>September 25, 2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s2</td>
+                                            <td>TV Show</td>
+                                            <td>September 24, 2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s8462</td>
+                                            <td>Movie</td>
+                                            <td>January 1, 2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s8507</td>
+                                            <td>Movie</td>
+                                            <td>November 13, 2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total rows: 1782</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-7">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>7. Find all the movies/TV shows by director 'Rajiv Chilaka’</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT * FROM netflix
+    WHERE director LIKE '%Rajiv Chilaka%';
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>show_id</th>
+                                            <th>type</th>
+                                            <th>director</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>s407</td>
+                                            <td>Movie</td>
+                                            <td>Rajiv Chilaka</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s408</td>
+                                            <td>Movie</td>
+                                            <td>Rajiv Chilaka</td>
+                                        </tr>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s6465</td>
+                                            <td>Movie</td>
+                                            <td>Rajiv Chilaka, Binayak Das</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s6646</td>
+                                            <td>Movie</td>
+                                            <td>Rajiv Chilaka</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total rows: 22</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-8">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>8. List all TV shows with more than 5 seasons</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT * FROM netflix
+    WHERE
+        type = 'TV Show'
+        AND
+        SPLIT_PART(duration, ' ', 1)::numeric > 5;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>show_id</th>
+                                            <th>type</th>
+                                            <th>duration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>s9</td>
+                                            <td>TV Show</td>
+                                            <td>9 Seasons</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s56</td>
+                                            <td>TV Show</td>
+                                            <td>6 Seasons</td>
+                                        </tr>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s8558</td>
+                                            <td>TV Show</td>
+                                            <td>7 Seasons</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s8711</td>
+                                            <td>TV Show</td>
+                                            <td>8 Seasons</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total rows: 99</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-9">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>9. Count the number of content items in each genre</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT 
+        TRIM(UNNEST(STRING_TO_ARRAY(listed_in, ','))) AS genre,
+        COUNT(show_id) AS total_content
+    FROM netflix
+    GROUP BY 1
+    ORDER BY 2 DESC;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>genre</th>
+                                            <th>total_content</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>International Movies</td>
+                                            <td>2752</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dramas</td>
+                                            <td>2427</td>
+                                        </tr>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Classic & Cult TV</td>
+                                            <td>28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TV Shows</td>
+                                            <td>16</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total rows: 42</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-10">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>10. Find each year and the average numbers of content release in India on netflix. return top 5 year with highest avg content release</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT
+        EXTRACT(YEAR FROM TO_DATE(date_added, 'Month DD, YYYY')) AS year,
+        COUNT(*) AS yearly_content,
+        ROUND(
+            COUNT(*)::numeric /
+            (SELECT COUNT(*) FROM netflix WHERE country ILIKE '%india%')::numeric * 100,
+            2
+        ) AS avg_content_per_year
+    FROM netflix
+    WHERE country ILIKE '%india%'
+    GROUP BY 1
+    ORDER BY 3 DESC;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>year</th>
+                                            <th>yearly_content</th>
+                                            <th>avg_content_per_year</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2018</td>
+                                            <td>349</td>
+                                            <td>33.37</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2019</td>
+                                            <td>218</td>
+                                            <td>20.84</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020</td>
+                                            <td>199</td>
+                                            <td>19.02</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2017</td>
+                                            <td>162</td>
+                                            <td>15.49</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021</td>
+                                            <td>105</td>
+                                            <td>10.04</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016</td>
+                                            <td>13</td>
+                                            <td>1.24</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-11">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>11. List all movies that are documentaries</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT * FROM netflix
+    WHERE
+        listed_in LIKE '%Documentaries%';
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>show_id</th>
+                                            <th>type</th>
+                                            <th>listed_in</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>s1</td>
+                                            <td>Movie</td>
+                                            <td>Documentaries</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s17</td>
+                                            <td>Movie</td>
+                                            <td>Documentaries, International Movies</td>
+                                        </tr>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s8757</td>
+                                            <td>Movie</td>
+                                            <td>Documentaries, Music & Musicals</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s8764</td>
+                                            <td>Movie</td>
+                                            <td>Documentaries</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total rows: 869</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-12">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>12. Find all content without a director</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT * FROM netflix
+    WHERE
+        director IS NULL;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>show_id</th>
+                                            <th>type</th>
+                                            <th>director</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>s2</td>
+                                            <td>TV Show</td>
+                                            <td>[null]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s4</td>
+                                            <td>TV Show</td>
+                                            <td>[null]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s8801</td>
+                                            <td>TV Show</td>
+                                            <td>[null]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>s8804</td>
+                                            <td>TV Show</td>
+                                            <td>[null]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total rows: 2634</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-13">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>13. Find how many movies actor 'Salman Khan' appeared in last 10 years</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT * FROM netflix
+    WHERE
+        casts ILIKE '%Salman Khan%'
+        AND
+        release_year > EXTRACT(YEAR FROM CURRENT_DATE) - 10;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>show_id</th>
+                                            <th>type</th>
+                                            <th>casts</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>s2757</td>
+                                            <td>Movie</td>
+                                            <td>Lorena Franco, Bijesh Jayarajan, Neet Chowdhary, Rajeev Gaursingh, Karran Jeet, Rajesh Sharma, Gautam Kurup, Poonam Mathur, Salman Khan, Manish Devkush</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-14">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>14. Find the top 10 actors who have appeared in the highest number of movies produced in India</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    SELECT
+        TRIM(UNNEST(STRING_TO_ARRAY(casts, ','))) AS actors,
+        COUNT(*) AS total_content
+    FROM netflix
+    WHERE country ILIKE '%india'
+    GROUP BY 1
+    ORDER BY 2 DESC
+    LIMIT 10;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>actors</th>
+                                            <th>total_content</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Anupam Kher</td>
+                                            <td>40</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shah Rukh Khan</td>
+                                            <td>33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kareena Kapoor</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ajay Devgn</td>
+                                            <td>21</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total rows: 10</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="section accordion-level-2" id="schema-15">
+                <div class="section-header">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    <h3>15. Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field. Label content containing these keywords as 'Bad' and all other content as 'Good'. Count how many items fall into each category</h3>
+                </div>
+
+                <div class="section-content">
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Code</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <pre><code class="language-sql">
+    WITH new_table
+    AS
+    (
+        SELECT *,
+            CASE
+            WHEN
+                description ILIKE '%kill%'
+                OR 
+                description ILIKE '%violence%'
+            THEN
+                'Bad'
+            ELSE
+                'Good'
+            END category
+        FROM netflix
+    )
+    SELECT
+        category,
+        COUNT(*) AS total_content
+    FROM new_table
+    GROUP BY 1;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="section accordion-level-3" id="schema-1">
+                        <div class="section-header">
+                            <i class="ri-arrow-right-s-fill"></i>
+                            <h3>Result</h3>
+                        </div>
+            
+                        <div class="section-content">
+                            <div class="schema-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>category</th>
+                                            <th>total_content</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Good</td>
+                                            <td>8465</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bad</td>
+                                            <td>342</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+    </main>
+  </div>
+  <script type="module" src="../assets/js/reports.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

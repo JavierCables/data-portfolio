@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+  <title>Javier Cables</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="header-title">
+        <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+        <span>JAVIER CABLES PORTFOLIO</span>
+      </div>
+      <div class="header-actions">
+        <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="ri-moon-fill"></i>
+        </button>
+        <button class="change-language">Spanish</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Title -->
+    <div class="title-container">
+      <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="atom-logo" />
+      <h1 class="main-title"><strong>JAVIER CABLES PORTFOLIO</strong></h1>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="callout-box about-section">
+      <div class="callout-header">
+        <i class="ri-id-card-fill"></i>
+        <h2>ABOUT ME</h2>
+      </div>
+      <p class="about-text">As a Data Scientist, I thrive on collaborating with cross-functional teams to solve real-world problems and drive strategic decision-making through data.</p>
+    </div>
+    
+    <!-- Contact Section -->
+    <div class="callout-box contact-section">
+      <div class="callout-header">
+        <i class="ri-contacts-fill"></i>
+        <h2>CONTACT</h2>
+      </div>
+
+      <div class="contact-grid">
+        <a href="assets/pdf/Resume - Javier Cables.pdf" class="contact-card" target="_blank">
+          <i class="ri-article-fill"></i>
+          <p>Resume</p>
+        </a>
+        <div class="contact-card-off">
+          <i class="ri-mail-fill"></i>
+          <p>javier.cables00@gmail.com</p>
+        </div>
+        <a href="https://www.linkedin.com/in/javiercables/" class="contact-card" target="_blank">
+          <i class="ri-linkedin-box-fill"></i>
+          <p>LinkedIn</p>
+        </a>
+        <div class="contact-card-off">
+          <i class="ri-map-pin-fill"></i>
+          <p>Madrid, Spain</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="callout-box skills-section">
+      <div class="callout-header">
+        <i class="ri-line-chart-fill"></i>
+        <h2>SKILLS</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skills-subsection">
+          <div class="subsection-header">
+            <i class="ri-cpu-line"></i>
+            <h3>TECHNICAL SKILLS</h3>
+          </div>
+          <div class="skills-content">
+            <p><span>Programming Languages:</span> Python, SQL</p>
+            <p><span>Data Visualization:</span> Power BI, Matplotlib, Seaborn</p>
+            <p><span>Machine Learning:</span> Scikit-learn, Tensorflow, Keras</p>
+            <p><span>Databases:</span> MySQL, MongoDB, PostgreSQL</p>
+          </div>
+        </div>
+
+        <div class="skills-subsection">
+          <div class="subsection-header">
+            <i class="ri-git-repository-fill"></i>
+            <h3>SOFT SKILLS</h3>
+          </div>
+          <div class="skills-content">
+            <p><span>Problem Solving:</span> Identifying data challenges and architecting scalable solutions</p>
+            <p><span>Critical Thinking:</span> Applying frameworks to extract insights from noisy data</p>
+            <p><span>Data Storytelling:</span> Crafting narratives that drive data-informed decision-making</p>
+            <p><span>Collaboration:</span> Building strong partnerships across teams</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Section -->
+    <div class="callout-box project-section">
+      <div class="callout-header">
+        <i class="ri-macbook-fill"></i>
+        <h2>Projects</h2>
+      </div>
+
+      <div class="projects-container" id="projectsContainer">
+          <!-- Projects will be dynamically populated -->
+      </div>
+      
+    </div>
+
+    <!-- Thank You Section -->
+    <div class="callout-box thank-you-section">
+      <div class="footer">
+        <i class="ri-emotion-happy-fill"></i>
+        <p>Thank you for taking the time to check out my portfolio!</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="root"></div>
+  <script crossorigin="anonymous" src="//unpkg.com/same-runtime/dist/index.global.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/projects.js"></script>
+</body>
+</html>

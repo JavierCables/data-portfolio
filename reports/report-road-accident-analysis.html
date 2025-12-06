@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+  <title>Detailed Report — For More Information</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-title">
+          <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+          <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
+          <span class="separator">/</span>
+          <a href="../projects/project-medical-chatbot.html">Road Accident Analysis Power BI Dashboard</a>
+          <span class="separator">/</span>
+          <span class="current">Detailed Report</span>
+        </div>
+        <div class="header-actions">
+          <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <i class="ri-moon-fill"></i>
+          </button>
+          <button class="change-language">Spanish</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="project-hero">
+        <img src="../assets/img/portfolio-4.jpg" alt="Vinyl Record">
+    </div>
+
+    <main class="main-content">
+      <!-- Report Header -->
+      <div class="project-header">
+          <i class="ri-roadster-fill"></i>
+          <h1>Detailed Report — For More Information</h1>
+      </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+
+      <!-- Table of Contents Callout -->
+      <div class="callout-box">
+        <div class="callout-header">
+          <i class="ri-list-check"></i>
+          <h3>Table of Contents</h3>
+        </div>
+    
+        <div class="callout-content">
+          <ul class="toc-list">
+            <li><a href="#project-summary">Project Summary</a></li>
+            <li><a href="#project-environment">Project Environment</a></li>
+            <li><a href="#scope-steps">Scope & Project Steps</a></li>
+            <li><a href="#data-sources">Data Sources & Data Gathering</a></li>
+            <li><a href="#data-modeling">Data Modeling, Measures and Schema</a></li>
+            <li><a href="#final-dashboard">Final Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Collapsible Sections -->
+      <div class="section accordion-level-1" id="project-summary">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Summary</h3>
+        </div>
+
+        <div class="section-content">
+          <p>This project focused on developing a dynamic and interactive Power BI dashboard from start to finish for Road Accident Analysis. The primary objective was to leverage road accident data for 2021 and 2022 to derive critical insights. The dashboard was designed to meet specific client requirements, including calculating Primary KPIs such as total casualties, total accidents, and year-on-year growth. Secondary KPIs involved analyzing casualties based on severity (fatal, serious, slight), vehicle types, road types, area locations (urban/rural), and light conditions (day/night). The visualization also aimed to identify accident hotspots by location.</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="project-environment">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Project Environment</h3>
+        </div>
+
+        <div class="section-content">
+          <p>This project used only the Free Version of Power BI.</p>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="scope-steps">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Scope & Project Steps</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Scope</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>End-to-end development of an interactive dashboard using Power BI, Power Query, and DAX to analyze two years of road accident data.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Project Steps</h3>
+              </div>
+  
+              <div class="section-content">
+                <li><p>Gathered requirements for primary and secondary KPIs, focusing on YoY comparisons and monthly trends</p></li>
+                <li><p>Identified primary stakeholders, including the Ministry of Transport and Emergency Services</p></li>
+                <li><p>Connected raw Excel data (307k rows) to Power BI Desktop</p></li>
+                <li><p>Cleaned data in Power Query Editor by correcting typographical errors (e.g., replacing 'fetal' with 'fatal')</p></li>
+                <li><p>Created a custom Calendar Table using DAX for Time Intelligence functions</p></li>
+                <li><p>Established a one-to-many relationship between the Calendar Table and the main data table</p></li>
+                <li><p>Wrote complex DAX measures for Current Year (YTD), Previous Year, and Year-on-Year growth calculations</p></li>
+                <li><p>Designed and imported a custom layout and background image created in PowerPoint</p></li>
+                <li><p>Built and formatted various visualizations (KPI cards, Area Chart, Donut Charts, Bar Chart, Map)</p></li>                
+                <li><p>Configured Edit Interactions and implemented Slicers (Road Surface, Weather Conditions) for dynamic filtering</p></li>                
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="data-sources">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Data Sources & Data Gathering</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Data Sources</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>The raw data utilized for this project was an Excel file. This file served as the database, containing approximately 307,000 rows and 21 columns.</p>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Data Gathering</h3>
+              </div>
+  
+              <div class="section-content">
+                <p>The Excel can be seen in Road Safety Data.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="data-modeling">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Data Modeling, Measures and Schema</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <h3>Data Modeling</h3>
+              </div>
+  
+              <div class="section-content">
+                <pre><code class="language-python">
+  Calendar = 
+    CALENDAR(MIN(Data[Accident Date]), MAX(Data[Accident Date]))
+                </code></pre>
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>DAX Measures</h3>
+              </div>
+  
+              <div class="section-content">
+
+              </div>
+          </div>
+
+          <div class="section accordion-level-2" id="schema-1">
+              <div class="section-header">
+                  <i class="ri-arrow-right-s-fill"></i>
+                  <h3>Schema</h3>
+              </div>
+  
+              <div class="section-content">
+
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section accordion-level-1" id="final-dashboard">
+        <div class="section-header">
+          <i class="ri-arrow-right-s-fill"></i>
+          <h3>Final Dashboard</h3>
+        </div>
+
+        <div class="section-content">
+          <img src="../assets/img/portfolio-4-1.png" alt="Metrics Visualization" class="visualization-image">
+        </div>
+      </div>
+
+      <!-- Navigation Bar -->
+      <a href="../index.html" class="navigation-card">
+          <i class="ri-arrow-left-fill"></i>
+          <h3>Homepage</h3>
+      </a>
+    </main>
+  </div>
+  <script type="module" src="../assets/js/reports.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
