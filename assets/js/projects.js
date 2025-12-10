@@ -70,8 +70,8 @@ function createProjectCard(project) {
     card.innerHTML = `
         <img src="${project.image}" alt="${project.title}" class="project-card-image">
         <div class="project-card-content">
-            <h3 class="project-card-title">${project.title}</h3>
-            <p class="project-card-description">${project.description}</p>
+            <h3 class="project-card-title" data-i18n="project.title-${project.id}">${project.title}</h3>
+            <p class="project-card-description" data-i18n="properties.description.text-${project.id}">${project.description}</p>
             <div class="project-card-tags-1">
                 ${tags1HTML}
             </div>

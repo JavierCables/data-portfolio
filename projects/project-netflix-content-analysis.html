@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Movies and TV Shows Data Analysis</title>
-    <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -19,16 +19,16 @@
     <header class="header">
         <div class="header-content">
             <div class="header-title">
-                <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+                <img src="../assets/img/logo.svg" alt="Atom icon" class="header-logo" />
                 <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
                 <span class="separator">/</span>
-                <span class="current">Netflix Movies and TV Shows Data Analysis</span>
+                <span class="current" data-i18n="properties.title-5">Netflix Movies and TV Shows Data Analysis</span>
             </div>
             <div class="header-actions">
                 <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
                     <i class="ri-moon-fill"></i>
                 </button>
-                <button class="change-language">Spanish</button>
+                <button class="change-language" id="langToggle" data-i18n="button.language">Spanish</button>
             </div>
         </div>
     </header>
@@ -42,7 +42,7 @@
         <!-- Project Header -->
         <div class="project-header">
             <i class="ri-movie-2-fill"></i>
-            <h1>Netflix Movies and TV Shows Data Analysis</h1>
+            <h1 data-i18n="properties.title-5">Netflix Movies and TV Shows Data Analysis</h1>
         </div>
 
         <!-- Properties Section -->
@@ -50,9 +50,9 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-align-left"></i>
-                    <span>Description</span>
+                    <span data-i18n="properties.description">Description</span>
                 </div>
-                <div class="property-value">
+                <div class="property-value no-flex" data-i18n="properties.description.text-5">
                     Analysis of 8,807 Netflix titles using <strong>PostgreSQL,</strong> solving 15 complex business problems.
                 </div>
             </div>
@@ -60,7 +60,7 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-list-check"></i>
-                    <span>Tool</span>
+                    <span data-i18n="properties.tool">Tool</span>
                 </div>
                 <div class="property-value">
                     <span class="tag tag-brown">SQL</span>
@@ -70,7 +70,7 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-list-check"></i>
-                    <span>Project Type</span>
+                    <span data-i18n="properties.projectType">Project Type</span>
                 </div>
                 <div class="property-value">
                     <span class="tag tag-purple">Data Transformation</span>
@@ -82,7 +82,7 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-link"></i>
-                    <span>Link</span>
+                    <span data-i18n="properties.link">Link</span>
                 </div>
                 <div class="property-value">
                     <a href="https://github.com/JavierCables/Netflix-SQL-Data-Analysis" target="_blank">github.com/JavierCables/Netflix-SQL-Data-Analysis</a>
@@ -92,10 +92,10 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-folder-line"></i>
-                    <span>Data</span>
+                    <span data-i18n="properties.data">Data</span>
                 </div>
                 <div class="property-value">
-                    <a href="https://drive.google.com/file/d/1zjaB_9OGbOS9eIr54xZIAy1m_krIQQen/view" target="_blank">https://drive.google.com/file/d/1zjaB_9OGbOS9eIr54xZIAy1m_krIQQen/view</a>
+                    <a href="https://drive.google.com/file/d/1zjaB_9OGbOS9eIr54xZIAy1m_krIQQen/view" target="_blank">drive.google.com/file/d/1zjaB_9OGbOS9eIr54xZIAy1m_krIQQen/view</a>
                 </div>
             </div>
         </section>
@@ -103,706 +103,708 @@
         <!-- Navigation Bar -->
         <a href="../index.html" class="navigation-card">
             <i class="ri-arrow-left-fill"></i>
-            <h3>Homepage</h3>
+            <p data-i18n="navigation.homepage">Homepage</p>
         </a>
 
         <!-- Summary Section -->
         <section class="callout-box summary-section">
             <div class="callout-header">
                 <i class="ri-align-left"></i>
-                <h3>Summary</h3>
+                <h3 data-i18n="summary.title">Summary</h3>
             </div>
 
             <div class="summary-content">
                 <div class="summary-item">
-                    <h4>Goal</h4>
-                    <p>The primary goal of this project was to conduct a comprehensive analysis of the Netflix movies and TV shows dataset (8,807 records) to address 15 medium to advanced business problems using advanced <span>SQL</span> techniques. The project aimed to demonstrate proficiency in database setup, data import, complex querying, and data manipulation within <span>PostgreSQL</span>. Key objectives included calculating content distributions (movies vs. TV shows), identifying top actors and countries, analyzing genre popularity, and assessing content based on specific keywords in descriptions (e.g., 'kill' or 'violence'). The final deliverable was a fully documented project published on a <span>GitHub</span> repository.</p>
+                    <h4 data-i18n="summary.goal.title">Goal</h4>
+                    <p data-i18n="summary.goal.text-5">The primary goal of this project was to conduct a comprehensive analysis of the Netflix movies and TV shows dataset (8,807 records) to address 15 medium to advanced business problems using advanced <span>SQL</span> techniques. The project aimed to demonstrate proficiency in database setup, data import, complex querying, and data manipulation within <span>PostgreSQL</span>. Key objectives included calculating content distributions (movies vs. TV shows), identifying top actors and countries, analyzing genre popularity, and assessing content based on specific keywords in descriptions (e.g., 'kill' or 'violence'). The final deliverable was a fully documented project published on a <span>GitHub</span> repository.</p>
+                    <br>
                 </div>
 
                 <div class="summary-item">
-                    <h4>Process</h4>
-                    <p>The project began by acquiring the Netflix dataset from <span>Kaggle</span> and initially exploring the data in <span>Excel</span>. A <span>PostgreSQL</span> database was set up using <span>PG Admin 4</span>, and the table schema was meticulously defined, carefully setting appropriate data types (e.g., <span>VARCHAR</span> limits) for all 8,808 potential rows. Data import required adjustments to column lengths, specifically for the 'listed in' column, utilizing <span>DROP TABLE</span> and <span>CREATE TABLE</span> commands to resolve import errors. Advanced <span>SQL</span> queries were then developed to solve 15 business problems, employing complex techniques such as Window Functions (<span>RANK</span>), various string manipulation functions (<span>STRING_TO_ARRAY</span>, <span>UNNEST</span>, <span>SPLIT_PART</span>, <span>ILIKE</span>), date conversion (<span>TO_DATE</span>), and subqueries.</p>
+                    <h4 data-i18n="summary.process.title">Process</h4>
+                    <p data-i18n="summary.process.text-5">The project began by acquiring the Netflix dataset from <span>Kaggle</span> and initially exploring the data in <span>Excel</span>. A <span>PostgreSQL</span> database was set up using <span>PG Admin 4</span>, and the table schema was meticulously defined, carefully setting appropriate data types (e.g., <span>VARCHAR</span> limits) for all 8,808 potential rows. Data import required adjustments to column lengths, specifically for the 'listed in' column, utilizing <span>DROP TABLE</span> and <span>CREATE TABLE</span> commands to resolve import errors. Advanced <span>SQL</span> queries were then developed to solve 15 business problems, employing complex techniques such as Window Functions (<span>RANK</span>), various string manipulation functions (<span>STRING_TO_ARRAY</span>, <span>UNNEST</span>, <span>SPLIT_PART</span>, <span>ILIKE</span>), date conversion (<span>TO_DATE</span>), and subqueries.</p>
+                    <br>
                 </div>
 
                 <div class="summary-item">
-                    <h4>Insights</h4>
-                    <p>The project successfully analyzed 8,807 Netflix content records, providing detailed SQL-based solutions to 15 complex business questions. Key analytical findings included content distribution (6,131 movies and 2,676 TV shows) and the most common content rating (TV-MA) for both types. Geographic analysis was enhanced by using <span>UNNEST</span> and <span>STRING_TO_ARRAY</span> to accurately split multi-country entries and identify top content-producing nations (like the US and India). Functional expertise was confirmed in handling non-standard text-based dates and durations. Finally, content was categorized (as 'Bad' or 'Good') based on description keywords using a <span>CASE</span> statement, demonstrating logical filtering capabilities. The complete analytical solution was documented and published on <span>GitHub</span>.</p>
+                    <h4 data-i18n="summary.insights.title">Insights</h4>
+                    <p data-i18n="summary.insights.text-5">The project successfully analyzed 8,807 Netflix content records, providing detailed SQL-based solutions to 15 complex business questions. Key analytical findings included content distribution (6,131 movies and 2,676 TV shows) and the most common content rating (TV-MA) for both types. Geographic analysis was enhanced by using <span>UNNEST</span> and <span>STRING_TO_ARRAY</span> to accurately split multi-country entries and identify top content-producing nations (like the US and India). Functional expertise was confirmed in handling non-standard text-based dates and durations. Finally, content was categorized (as 'Bad' or 'Good') based on description keywords using a <span>CASE</span> statement, demonstrating logical filtering capabilities. The complete analytical solution was documented and published on <span>GitHub</span>.</p>
                 </div>
             </div>
         </section>
 
         <!-- Visualizations -->
-        <section class="callout-box visualization-section">
-            <div class="callout-header">
-                <i class="ri-file-fill"></i>
-                <h3>Results</h3>
-            </div>
-            
-            <div class="section accordion-level-1" id="schema-1">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>1. Count the number of Movies vs TV Shows</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>type</th>
-                                    <th>total_content</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Movie</td>
-                                    <td>6131</td>
-                                </tr>
-                                <tr>
-                                    <td>TV Show</td>
-                                    <td>2676</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <div class="callout-header">
+            <i class="ri-file-fill"></i>
+            <h3 data-i18n="results.title-5">Results</h3>
+        </div>
+        
+        <div class="section accordion-level-1" id="schema-1">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.1">1. Count the number of Movies vs TV Shows</p>
             </div>
 
-            <div class="section accordion-level-1" id="schema-2">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>2. Find the most common rating for movies and TV shows</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>type</th>
-                                    <th>rating</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Movie</td>
-                                    <td>TV-MA</td>
-                                </tr>
-                                <tr>
-                                    <td>TV Show</td>
-                                    <td>TV-MA</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>type</th>
+                                <th>total_content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Movie</td>
+                                <td>6131</td>
+                            </tr>
+                            <tr>
+                                <td>TV Show</td>
+                                <td>2676</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-            <div class="section accordion-level-1" id="schema-3">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>3. List all movies released in a specific year (e.g., 2020)</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>show_id</th>
-                                    <th>type</th>
-                                    <th>title</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>s1</td>
-                                    <td>Movie</td>
-                                    <td>Dick Johnson Is Dead</td>
-                                </tr>
-                                <tr>
-                                    <td>s17</td>
-                                    <td>Movie</td>
-                                    <td>Europe's Most Dangerous Man: Otto Skorzeny in Spain</td>
-                                </tr>
-                                <tr>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>s7595</td>
-                                    <td>Movie</td>
-                                    <td>Norm of the North: Family Vacation</td>
-                                </tr>
-                                <tr>
-                                    <td>s8100</td>
-                                    <td>Movie</td>
-                                    <td>Straight Up</td>
-                                </tr>
-                                <tr>
-                                    <td>Total rows: 517</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <div class="section accordion-level-1" id="schema-2">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.2">2. Find the most common rating for movies and TV shows</p>
             </div>
 
-            <div class="section accordion-level-1" id="schema-4">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>4. Find the top 5 countries with the most content on Netflix</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>new_country</th>
-                                    <th>total_content</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>United States</td>
-                                    <td>3690</td>
-                                </tr>
-                                <tr>
-                                    <td>India</td>
-                                    <td>1046</td>
-                                </tr>
-                                <tr>
-                                    <td>United Kingdom</td>
-                                    <td>806</td>
-                                </tr>
-                                <tr>
-                                    <td>Canada</td>
-                                    <td>445</td>
-                                </tr>
-                                <tr>
-                                    <td>France</td>
-                                    <td>393</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>type</th>
+                                <th>rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Movie</td>
+                                <td>TV-MA</td>
+                            </tr>
+                            <tr>
+                                <td>TV Show</td>
+                                <td>TV-MA</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-            <div class="section accordion-level-1" id="schema-5">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>5. Identify the longest movie</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>type</th>
-                                    <th>title</th>
-                                    <th>split_part</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Movie</td>
-                                    <td>Black Mirror: Bandersnatch</td>
-                                    <td>312</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <div class="section accordion-level-1" id="schema-3">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.3">3. List all movies released in a specific year (e.g., 2020)</p>
             </div>
 
-            <div class="section accordion-level-1" id="schema-6">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>6. Find content added in the last 5 years</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>show_id</th>
-                                    <th>type</th>
-                                    <th>date_added</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>s1</td>
-                                    <td>Movie</td>
-                                    <td>September 25, 2021</td>
-                                </tr>
-                                <tr>
-                                    <td>s2</td>
-                                    <td>TV Show</td>
-                                    <td>September 24, 2021</td>
-                                </tr>
-                                <tr>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>s8462</td>
-                                    <td>Movie</td>
-                                    <td>January 1, 2021</td>
-                                </tr>
-                                <tr>
-                                    <td>s8507</td>
-                                    <td>Movie</td>
-                                    <td>November 13, 2020</td>
-                                </tr>
-                                <tr>
-                                    <td>Total rows: 1782</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>show_id</th>
+                                <th>type</th>
+                                <th>title</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>s1</td>
+                                <td>Movie</td>
+                                <td>Dick Johnson Is Dead</td>
+                            </tr>
+                            <tr>
+                                <td>s17</td>
+                                <td>Movie</td>
+                                <td>Europe's Most Dangerous Man: Otto Skorzeny in Spain</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>s7595</td>
+                                <td>Movie</td>
+                                <td>Norm of the North: Family Vacation</td>
+                            </tr>
+                            <tr>
+                                <td>s8100</td>
+                                <td>Movie</td>
+                                <td>Straight Up</td>
+                            </tr>
+                            <tr>
+                                <td>Total rows: 517</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-            <div class="section accordion-level-1" id="schema-7">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>7. Find all the movies/TV shows by director 'Rajiv Chilaka’</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>show_id</th>
-                                    <th>type</th>
-                                    <th>director</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>s407</td>
-                                    <td>Movie</td>
-                                    <td>Rajiv Chilaka</td>
-                                </tr>
-                                <tr>
-                                    <td>s408</td>
-                                    <td>Movie</td>
-                                    <td>Rajiv Chilaka</td>
-                                </tr>
-                                <tr>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>s6465</td>
-                                    <td>Movie</td>
-                                    <td>Rajiv Chilaka, Binayak Das</td>
-                                </tr>
-                                <tr>
-                                    <td>s6646</td>
-                                    <td>Movie</td>
-                                    <td>Rajiv Chilaka</td>
-                                </tr>
-                                <tr>
-                                    <td>Total rows: 22</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <div class="section accordion-level-1" id="schema-4">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.4">4. Find the top 5 countries with the most content on Netflix</p>
             </div>
 
-            <div class="section accordion-level-1" id="schema-8">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>8. List all TV shows with more than 5 seasons</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>show_id</th>
-                                    <th>type</th>
-                                    <th>duration</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>s9</td>
-                                    <td>TV Show</td>
-                                    <td>9 Seasons</td>
-                                </tr>
-                                <tr>
-                                    <td>s56</td>
-                                    <td>TV Show</td>
-                                    <td>6 Seasons</td>
-                                </tr>
-                                <tr>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>s8558</td>
-                                    <td>TV Show</td>
-                                    <td>7 Seasons</td>
-                                </tr>
-                                <tr>
-                                    <td>s8711</td>
-                                    <td>TV Show</td>
-                                    <td>8 Seasons</td>
-                                </tr>
-                                <tr>
-                                    <td>Total rows: 99</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>new_country</th>
+                                <th>total_content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>United States</td>
+                                <td>3690</td>
+                            </tr>
+                            <tr>
+                                <td>India</td>
+                                <td>1046</td>
+                            </tr>
+                            <tr>
+                                <td>United Kingdom</td>
+                                <td>806</td>
+                            </tr>
+                            <tr>
+                                <td>Canada</td>
+                                <td>445</td>
+                            </tr>
+                            <tr>
+                                <td>France</td>
+                                <td>393</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-            <div class="section accordion-level-1" id="schema-9">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>9. Count the number of content items in each genre</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>genre</th>
-                                    <th>total_content</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>International Movies</td>
-                                    <td>2752</td>
-                                </tr>
-                                <tr>
-                                    <td>Dramas</td>
-                                    <td>2427</td>
-                                </tr>
-                                <tr>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Classic & Cult TV</td>
-                                    <td>28</td>
-                                </tr>
-                                <tr>
-                                    <td>TV Shows</td>
-                                    <td>16</td>
-                                </tr>
-                                <tr>
-                                    <td>Total rows: 42</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <div class="section accordion-level-1" id="schema-5">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.5">5. Identify the longest movie</p>
             </div>
 
-            <div class="section accordion-level-1" id="schema-10">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>10. Find each year and the average numbers of content release in India on netflix. return top 5 year with highest avg content release</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>year</th>
-                                    <th>yearly_content</th>
-                                    <th>avg_content_per_year</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2018</td>
-                                    <td>349</td>
-                                    <td>33.37</td>
-                                </tr>
-                                <tr>
-                                    <td>2019</td>
-                                    <td>218</td>
-                                    <td>20.84</td>
-                                </tr>
-                                <tr>
-                                    <td>2020</td>
-                                    <td>199</td>
-                                    <td>19.02</td>
-                                </tr>
-                                <tr>
-                                    <td>2017</td>
-                                    <td>162</td>
-                                    <td>15.49</td>
-                                </tr>
-                                <tr>
-                                    <td>2021</td>
-                                    <td>105</td>
-                                    <td>10.04</td>
-                                </tr>
-                                <tr>
-                                    <td>2016</td>
-                                    <td>13</td>
-                                    <td>1.24</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>type</th>
+                                <th>title</th>
+                                <th>split_part</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Movie</td>
+                                <td>Black Mirror: Bandersnatch</td>
+                                <td>312</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-            <div class="section accordion-level-1" id="schema-11">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>11. List all movies that are documentaries</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>show_id</th>
-                                    <th>type</th>
-                                    <th>listed_in</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>s1</td>
-                                    <td>Movie</td>
-                                    <td>Documentaries</td>
-                                </tr>
-                                <tr>
-                                    <td>s17</td>
-                                    <td>Movie</td>
-                                    <td>Documentaries, International Movies</td>
-                                </tr>
-                                <tr>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>s8757</td>
-                                    <td>Movie</td>
-                                    <td>Documentaries, Music & Musicals</td>
-                                </tr>
-                                <tr>
-                                    <td>s8764</td>
-                                    <td>Movie</td>
-                                    <td>Documentaries</td>
-                                </tr>
-                                <tr>
-                                    <td>Total rows: 869</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <div class="section accordion-level-1" id="schema-6">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.6">6. Find content added in the last 5 years</p>
             </div>
 
-            <div class="section accordion-level-1" id="schema-12">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>12. Find all content without a director</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>show_id</th>
-                                    <th>type</th>
-                                    <th>director</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>s2</td>
-                                    <td>TV Show</td>
-                                    <td>[null]</td>
-                                </tr>
-                                <tr>
-                                    <td>s4</td>
-                                    <td>TV Show</td>
-                                    <td>[null]</td>
-                                </tr>
-                                <tr>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>s8801</td>
-                                    <td>TV Show</td>
-                                    <td>[null]</td>
-                                </tr>
-                                <tr>
-                                    <td>s8804</td>
-                                    <td>TV Show</td>
-                                    <td>[null]</td>
-                                </tr>
-                                <tr>
-                                    <td>Total rows: 2634</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>show_id</th>
+                                <th>type</th>
+                                <th>date_added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>s1</td>
+                                <td>Movie</td>
+                                <td>September 25, 2021</td>
+                            </tr>
+                            <tr>
+                                <td>s2</td>
+                                <td>TV Show</td>
+                                <td>September 24, 2021</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>s8462</td>
+                                <td>Movie</td>
+                                <td>January 1, 2021</td>
+                            </tr>
+                            <tr>
+                                <td>s8507</td>
+                                <td>Movie</td>
+                                <td>November 13, 2020</td>
+                            </tr>
+                            <tr>
+                                <td>Total rows: 1782</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-            <div class="section accordion-level-1" id="schema-13">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>13. Find how many movies actor 'Salman Khan' appeared in last 10 years</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>show_id</th>
-                                    <th>type</th>
-                                    <th>casts</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>s2757</td>
-                                    <td>Movie</td>
-                                    <td>Lorena Franco, Bijesh Jayarajan, Neet Chowdhary, Rajeev Gaursingh, Karran Jeet, Rajesh Sharma, Gautam Kurup, Poonam Mathur, Salman Khan, Manish Devkush</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <div class="section accordion-level-1" id="schema-7">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.7">7. Find all the movies/TV shows by director 'Rajiv Chilaka’</p>
             </div>
 
-            <div class="section accordion-level-1" id="schema-14">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>14. Find the top 10 actors who have appeared in the highest number of movies produced in India</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>actors</th>
-                                    <th>total_content</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Anupam Kher</td>
-                                    <td>40</td>
-                                </tr>
-                                <tr>
-                                    <td>Shah Rukh Khan</td>
-                                    <td>33</td>
-                                </tr>
-                                <tr>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Kareena Kapoor</td>
-                                    <td>24</td>
-                                </tr>
-                                <tr>
-                                    <td>Ajay Devgn</td>
-                                    <td>21</td>
-                                </tr>
-                                <tr>
-                                    <td>Total rows: 10</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section accordion-level-1" id="schema-15">
-                <div class="section-header">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    <h3>15. Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field. Label content containing these keywords as 'Bad' and all other content as 'Good'. Count how many items fall into each category</h3>
-                </div>
-
-                <div class="section-content">
-                    <div class="schema-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>category</th>
-                                    <th>total_content</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Good</td>
-                                    <td>8465</td>
-                                </tr>
-                                <tr>
-                                    <td>Bad</td>
-                                    <td>342</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>show_id</th>
+                                <th>type</th>
+                                <th>director</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>s407</td>
+                                <td>Movie</td>
+                                <td>Rajiv Chilaka</td>
+                            </tr>
+                            <tr>
+                                <td>s408</td>
+                                <td>Movie</td>
+                                <td>Rajiv Chilaka</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>s6465</td>
+                                <td>Movie</td>
+                                <td>Rajiv Chilaka, Binayak Das</td>
+                            </tr>
+                            <tr>
+                                <td>s6646</td>
+                                <td>Movie</td>
+                                <td>Rajiv Chilaka</td>
+                            </tr>
+                            <tr>
+                                <td>Total rows: 22</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="section accordion-level-1" id="schema-8">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.8">8. List all TV shows with more than 5 seasons</p>
+            </div>
+
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>show_id</th>
+                                <th>type</th>
+                                <th>duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>s9</td>
+                                <td>TV Show</td>
+                                <td>9 Seasons</td>
+                            </tr>
+                            <tr>
+                                <td>s56</td>
+                                <td>TV Show</td>
+                                <td>6 Seasons</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>s8558</td>
+                                <td>TV Show</td>
+                                <td>7 Seasons</td>
+                            </tr>
+                            <tr>
+                                <td>s8711</td>
+                                <td>TV Show</td>
+                                <td>8 Seasons</td>
+                            </tr>
+                            <tr>
+                                <td>Total rows: 99</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="section accordion-level-1" id="schema-9">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.9">9. Count the number of content items in each genre</p>
+            </div>
+
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>genre</th>
+                                <th>total_content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>International Movies</td>
+                                <td>2752</td>
+                            </tr>
+                            <tr>
+                                <td>Dramas</td>
+                                <td>2427</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>Classic & Cult TV</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>TV Shows</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Total rows: 42</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="section accordion-level-1" id="schema-10">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.10">10. Find each year and the average numbers of content release in India on netflix. return top 5 year with highest avg content release</p>
+            </div>
+
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>year</th>
+                                <th>yearly_content</th>
+                                <th>avg_content_per_year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2018</td>
+                                <td>349</td>
+                                <td>33.37</td>
+                            </tr>
+                            <tr>
+                                <td>2019</td>
+                                <td>218</td>
+                                <td>20.84</td>
+                            </tr>
+                            <tr>
+                                <td>2020</td>
+                                <td>199</td>
+                                <td>19.02</td>
+                            </tr>
+                            <tr>
+                                <td>2017</td>
+                                <td>162</td>
+                                <td>15.49</td>
+                            </tr>
+                            <tr>
+                                <td>2021</td>
+                                <td>105</td>
+                                <td>10.04</td>
+                            </tr>
+                            <tr>
+                                <td>2016</td>
+                                <td>13</td>
+                                <td>1.24</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="section accordion-level-1" id="schema-11">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.11">11. List all movies that are documentaries</p>
+            </div>
+
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>show_id</th>
+                                <th>type</th>
+                                <th>listed_in</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>s1</td>
+                                <td>Movie</td>
+                                <td>Documentaries</td>
+                            </tr>
+                            <tr>
+                                <td>s17</td>
+                                <td>Movie</td>
+                                <td>Documentaries, International Movies</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>s8757</td>
+                                <td>Movie</td>
+                                <td>Documentaries, Music & Musicals</td>
+                            </tr>
+                            <tr>
+                                <td>s8764</td>
+                                <td>Movie</td>
+                                <td>Documentaries</td>
+                            </tr>
+                            <tr>
+                                <td>Total rows: 869</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="section accordion-level-1" id="schema-12">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.12">12. Find all content without a director</p>
+            </div>
+
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>show_id</th>
+                                <th>type</th>
+                                <th>director</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>s2</td>
+                                <td>TV Show</td>
+                                <td>[null]</td>
+                            </tr>
+                            <tr>
+                                <td>s4</td>
+                                <td>TV Show</td>
+                                <td>[null]</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>s8801</td>
+                                <td>TV Show</td>
+                                <td>[null]</td>
+                            </tr>
+                            <tr>
+                                <td>s8804</td>
+                                <td>TV Show</td>
+                                <td>[null]</td>
+                            </tr>
+                            <tr>
+                                <td>Total rows: 2634</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="section accordion-level-1" id="schema-13">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.13">13. Find how many movies actor 'Salman Khan' appeared in last 10 years</p>
+            </div>
+
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>show_id</th>
+                                <th>type</th>
+                                <th>casts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>s2757</td>
+                                <td>Movie</td>
+                                <td>Lorena Franco, Bijesh Jayarajan, Neet Chowdhary, Rajeev Gaursingh, Karran Jeet, Rajesh Sharma, Gautam Kurup, Poonam Mathur, Salman Khan, Manish Devkush</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="section accordion-level-1" id="schema-14">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.14">14. Find the top 10 actors who have appeared in the highest number of movies produced in India</p>
+            </div>
+
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>actors</th>
+                                <th>total_content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anupam Kher</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>Shah Rukh Khan</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>Kareena Kapoor</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>Ajay Devgn</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>Total rows: 10</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="section accordion-level-1" id="schema-15">
+            <div class="section-header">
+                <i class="ri-arrow-right-s-fill"></i>
+                <p data-i18n="sub.solution.title-5.15">15. Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field. Label content containing these keywords as 'Bad' and all other content as 'Good'. Count how many items fall into each category</p>
+            </div>
+
+            <div class="section-content">
+                <div class="schema-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>category</th>
+                                <th>total_content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Good</td>
+                                <td>8465</td>
+                            </tr>
+                            <tr>
+                                <td>Bad</td>
+                                <td>342</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
         <!-- Advanced Report -->
         <a href="../reports/report-netflix-content-analysis.html" class="report-card">
             <i class="ri-music-2-fill"></i>
-            <h3>Advanced Report</h3>
+            <p data-i18n="advanced.report">Advanced Report</p>
         </a>
 
         <!-- Bottom Navigation -->
         <a href="../index.html" class="navigation-card">
             <i class="ri-arrow-left-fill"></i>
-            <h3>Homepage</h3>
+            <p data-i18n="navigation.homepage">Homepage</p>
         </a>
     </main>
     <script type="module" src="../assets/js/reports.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/language-handler.js"></script>
+    <script src="../assets/js/languages.js"></script>
 </body>
 </html>

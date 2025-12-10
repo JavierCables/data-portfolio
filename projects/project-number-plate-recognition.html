@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatic Number Plate Recognition</title>
-    <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -13,16 +13,16 @@
     <header class="header">
         <div class="header-content">
             <div class="header-title">
-                <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+                <img src="../assets/img/logo.svg" alt="Atom icon" class="header-logo" />
                 <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
                 <span class="separator">/</span>
-                <span class="current">Automatic Number Plate Recognition</span>
+                <span class="current" data-i18n="properties.title-2">Automatic Number Plate Recognition</span>
             </div>
             <div class="header-actions">
                 <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
                     <i class="ri-moon-fill"></i>
                 </button>
-                <button class="change-language">Spanish</button>
+                <button class="change-language" id="langToggle" data-i18n="button.language">Spanish</button>
             </div>
         </div>
     </header>
@@ -36,7 +36,7 @@
         <!-- Project Header -->
         <div class="project-header">
             <i class="ri-steering-2-fill"></i>
-            <h1>Automatic Number Plate Recognition</h1>
+            <h1 data-i18n="properties.title-2">Automatic Number Plate Recognition</h1>
         </div>
 
         <!-- Properties Section -->
@@ -44,17 +44,17 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-align-left"></i>
-                    <span>Description</span>
+                    <span data-i18n="properties.description">Description</span>
                 </div>
-                <div class="property-value">
-                    Automatic Number Plate Recognition using <strong>YOLOv8,</strong> object tracking (SORT), and <strong>EasyOCR.</strong>
+                <div class="property-value no-flex" data-i18n="properties.description.text-2">
+                    Automatic Number Plate Recognition using <strong>YOLOv8</strong>, object tracking (SORT), and <strong>EasyOCR.</strong>
                 </div>
             </div>
 
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-list-check"></i>
-                    <span>Tool</span>
+                    <span data-i18n="properties.tool">Tool</span>
                 </div>
                 <div class="property-value">
                     <span class="tag tag-green">Python</span>
@@ -64,7 +64,7 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-list-check"></i>
-                    <span>Project Type</span>
+                    <span data-i18n="properties.projectType">Project Type</span>
                 </div>
                 <div class="property-value">
                     <span class="tag tag-blue">Data Cleaning</span>
@@ -79,7 +79,7 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-link"></i>
-                    <span>Link</span>
+                    <span data-i18n="properties.link">Link</span>
                 </div>
                 <div class="property-value">
                     <a href="https://github.com/JavierCables/License-Plate-Recognition" target="_blank">github.com/JavierCables/License-Plate-Recognition</a>
@@ -89,10 +89,10 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-folder-line"></i>
-                    <span>Data</span>
+                    <span data-i18n="properties.data">Data</span>
                 </div>
                 <div class="property-value">
-                    <span>PLACEHOLDER</span>
+                    <a href="../assets/video/sample.mp4" target="_blank">sample.mp4</a>
                 </div>
             </div>
         </section>
@@ -100,30 +100,32 @@
         <!-- Navigation Bar -->
         <a href="../index.html" class="navigation-card">
             <i class="ri-arrow-left-fill"></i>
-            <h3>Homepage</h3>
+            <p data-i18n="navigation.homepage">Homepage</p>
         </a>
 
         <!-- Summary Section -->
         <section class="callout-box summary-section">
             <div class="callout-header">
                 <i class="ri-align-left"></i>
-                <h3>Summary</h3>
+                <h3 data-i18n="summary.title">Summary</h3>
             </div>
 
             <div class="summary-content">
                 <div class="summary-item">
-                    <h4>Goal</h4>
-                    <p>The primary goal was to develop a robust Automatic Number Plate Recognition (<span>ANPR</span>) system using 100% <span>Python</span>. This involved accurately detecting moving license plates and reading the corresponding text in a video environment. A key aspect was combining object detection (<span>YOLOv8</span>) with object tracking (<span>SORT</span>) to assign unique IDs to vehicles throughout the video. This tracking was crucial for determining the single, most accurate license plate value for each car by selecting the read text with the highest OCR confidence score, thereby solving ambiguity issues across multiple frames. The project focused specifically on the United Kingdom license plate format.</p>
+                    <h4 data-i18n="summary.goal.title">Goal</h4>
+                    <p data-i18n="summary.goal.text-2">The primary goal was to develop a robust Automatic Number Plate Recognition (<span>ANPR</span>) system using 100% <span>Python</span>. This involved accurately detecting moving license plates and reading the corresponding text in a video environment. A key aspect was combining object detection (<span>YOLOv8</span>) with object tracking (<span>SORT</span>) to assign unique IDs to vehicles throughout the video. This tracking was crucial for determining the single, most accurate license plate value for each car by selecting the read text with the highest OCR confidence score, thereby solving ambiguity issues across multiple frames. The project focused specifically on the United Kingdom license plate format.</p>
+                    <br>
                 </div>
 
                 <div class="summary-item">
-                    <h4>Process</h4>
-                    <p>The process began with loading <span>YOLOv8</span> models for car and license plate detection. Frames were read and vehicles detected. Object tracking (<span>SORT</span>) was implemented on vehicles to assign unique IDs. License plates were detected and assigned to their corresponding tracked cars using bounding box containment logic. The license plate image was cropped and pre-processed using grayscale conversion and thresholding to optimize OCR performance. <span>EasyOCR</span> read the text. Post-processing involved validating the text against the UK format and correcting common character confusions (e.g., S/5, O/0) for robustness. Results, including bounding box data and confidence scores, were structured by frame and car ID, saved to a <span>CSV file</span>, and interpolated for stable video visualization.</p>
+                    <h4 data-i18n="summary.process.title">Process</h4>
+                    <p data-i18n="summary.process.text-2">The process began with loading <span>YOLOv8</span> models for car and license plate detection. Frames were read and vehicles detected. Object tracking (<span>SORT</span>) was implemented on vehicles to assign unique IDs. License plates were detected and assigned to their corresponding tracked cars using bounding box containment logic. The license plate image was cropped and pre-processed using grayscale conversion and thresholding to optimize OCR performance. <span>EasyOCR</span> read the text. Post-processing involved validating the text against the UK format and correcting common character confusions (e.g., S/5, O/0) for robustness. Results, including bounding box data and confidence scores, were structured by frame and car ID, saved to a <span>CSV file</span>, and interpolated for stable video visualization.</p>
+                    <br>
                 </div>
 
                 <div class="summary-item">
-                    <h4>Insights</h4>
-                    <p>The project successfully implemented a complete end-to-end Automatic Number Plate Recognition system. By integrating deep learning object detection (<span>YOLOv8</span>) and robust object tracking (<span>SORT</span>), the solution could track vehicles and reliably associate license plate detections. Critical computer vision steps were applied, including image preprocessing (<span>thresholding</span>) to maximize <span>OCR</span> accuracy. Post-processing logic ensured that only texts matching the required format were accepted and provided automatic character correction to enhance reliability. The methodology leveraged the vehicle tracking data to select the single most confident license plate reading for each vehicle over time. The final output included a structured <span>CSV file</span> containing frame-by-frame vehicle and license plate data, ready for further analysis and video visualization.</p>
+                    <h4 data-i18n="summary.insights.title">Insights</h4>
+                    <p data-i18n="summary.insights.text-2">The project successfully implemented a complete end-to-end Automatic Number Plate Recognition system. By integrating deep learning object detection (<span>YOLOv8</span>) and robust object tracking (<span>SORT</span>), the solution could track vehicles and reliably associate license plate detections. Critical computer vision steps were applied, including image preprocessing (<span>thresholding</span>) to maximize <span>OCR</span> accuracy. Post-processing logic ensured that only texts matching the required format were accepted and provided automatic character correction to enhance reliability. The methodology leveraged the vehicle tracking data to select the single most confident license plate reading for each vehicle over time. The final output included a structured <span>CSV file</span> containing frame-by-frame vehicle and license plate data, ready for further analysis and video visualization.</p>
                 </div>
             </div>
         </section>
@@ -132,7 +134,7 @@
         <section class="callout-box visualization-section">
             <div class="callout-header">
                 <i class="ri-information-2-fill"></i>
-                <h3>UK License Plate Format</h3>
+                <h3 data-i18n="information.title-2">UK License Plate Format</h3>
             </div>
             <img src="../assets/img/portfolio-2-1.svg" alt="Metrics Visualization" class="visualization-image">
         </section>
@@ -140,7 +142,7 @@
         <section class="callout-box visualization-section">
             <div class="callout-header">
                 <i class="ri-video-on-fill"></i>
-                <h3>Initial Data</h3>
+                <h3 data-i18n="video.title-2.1">Initial Data</h3>
             </div>
             <video src="../assets/video/sample.mp4" controls></video>
         </section>
@@ -148,7 +150,7 @@
         <section class="callout-box visualization-section">
             <div class="callout-header">
                 <i class="ri-video-on-fill"></i>
-                <h3>Final Visualization</h3>
+                <h3 data-i18n="video.title-2.2">Final Visualization</h3>
             </div>
             <video src="../assets/video/out.mp4" controls></video>
         </section>
@@ -156,15 +158,17 @@
         <!-- Advanced Report -->
         <a href="../reports/report-number-plate-recognition.html" class="report-card">
             <i class="ri-music-2-fill"></i>
-            <h3>Advanced Report</h3>
+            <p data-i18n="advanced.report">Advanced Report</p>
         </a>
 
         <!-- Bottom Navigation -->
         <a href="../index.html" class="navigation-card">
             <i class="ri-arrow-left-fill"></i>
-            <h3>Homepage</h3>
+            <p data-i18n="navigation.homepage">Homepage</p>
         </a>
     </main>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/language-handler.js"></script>
+    <script src="../assets/js/languages.js"></script>
 </body>
 </html>

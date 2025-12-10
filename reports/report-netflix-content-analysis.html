@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
   <title>Detailed Report — For More Information</title>
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
@@ -12,6 +12,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/dracula.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
+
+  <style>
+    /* Cambiar fondo del bloque de código */
+    pre code.hljs {
+      background: #36312c;
+      color: #ebd1b7;
+      border-radius: 7px;
+      padding: 1.2rem;
+      display: block;
+    }
+    .hljs-keyword { color: #95cc5e }
+    .hljs-string  { color: #ee6018 }
+    .hljs-number  { color: #f8bb39 }
+    .hljs-comment { color: #7a7267; font-style: italic; }
+    .hljs-meta { color: #f8bb39; }
+    .hljs-built_in { color: #95cc5e; }
+    .hljs-title.function_ { color: #ee6018; }
+    .hljs-literal { color: #f8bb39; }
+    .hljs-title.class_ { color: #ee1895; }
+    .hljs-variable { color: #ee1895; }
+    .hljs-params { color: #f8bb39; }
+    .hljs-type { color: #f8bb39; }
+  </style>
 </head>
 
 <body>
@@ -20,18 +43,18 @@
     <header class="header">
       <div class="header-content">
         <div class="header-title">
-          <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+          <img src="../assets/img/logo.svg" alt="Atom icon" class="header-logo" />
           <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
           <span class="separator">/</span>
-          <a href="../projects/project-netflix-content-analysis.html">Netflix Movies and TV Shows Data Analysis</a>
+          <a href="../projects/project-netflix-content-analysis.html" data-i18n="properties.title-5">Netflix Movies and TV Shows Data Analysis</a>
           <span class="separator">/</span>
-          <span class="current">Detailed Report</span>
+          <span class="current" data-i18n="header.report">Detailed Report</span>
         </div>
         <div class="header-actions">
           <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
             <i class="ri-moon-fill"></i>
           </button>
-          <button class="change-language">Spanish</button>
+          <button class="change-language" id="langToggle" data-i18n="button.language">Spanish</button>
         </div>
       </div>
     </header>
@@ -45,30 +68,30 @@
       <!-- Report Header -->
       <div class="project-header">
           <i class="ri-movie-2-fill"></i>
-          <h1>Detailed Report — For More Information</h1>
+          <h1 data-i18n="report.title">Detailed Report — For More Information</h1>
       </div>
 
       <!-- Navigation Bar -->
       <a href="../index.html" class="navigation-card">
           <i class="ri-arrow-left-fill"></i>
-          <h3>Homepage</h3>
+          <p data-i18n="navigation.homepage">Homepage</p>
       </a>
 
       <!-- Table of Contents Callout -->
       <div class="callout-box">
         <div class="callout-header">
           <i class="ri-list-check"></i>
-          <h3>Table of Contents</h3>
+          <h3 data-i18n="toc.title">Table of Contents</h3>
         </div>
     
         <div class="callout-content">
           <ul class="toc-list">
-            <li><a href="#project-summary">Project Summary</a></li>
-            <li><a href="#project-environment">Project Environment</a></li>
-            <li><a href="#scope-steps">Scope & Project Steps</a></li>
-            <li><a href="#data-sources">Data Sources & Data Gathering</a></li>
-            <li><a href="#schema">Schema</a></li>
-            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#project-summary" data-i18n="section.summary">Project Summary</a></li>
+            <li><a href="#project-environment" data-i18n="section.environment">Project Environment</a></li>
+            <li><a href="#scope-steps" data-i18n="section.scope_steps">Scope & Project Steps</a></li>
+            <li><a href="#data-sources" data-i18n="section.data_sources">Data Sources & Data Gathering</a></li>
+            <li><a href="#schema" data-i18n="sub.schema">Schema</a></li>
+            <li><a href="#solutions" data-i18n="section.solutions">Solutions</a></li>
           </ul>
         </div>
       </div>
@@ -77,59 +100,59 @@
       <div class="section accordion-level-1" id="project-summary">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Project Summary</h3>
+          <p data-i18n="section.summary">Project Summary</p>
         </div>
 
         <div class="section-content">
-          <p>Advanced SQL analysis of 8,807 Netflix titles, solving 15 complex business problems. The methodology involved setting up a PostgreSQL database, defining the schema, manipulating complex text fields using array and string functions (UNNEST, STRING_TO_ARRAY), and applying Window Functions.</p>
+          <p data-i18n="section.summary.text-5">Advanced <span>SQL</span> analysis of 8,807 Netflix titles, solving 15 complex business problems. The methodology involved setting up a <span>PostgreSQL</span> database, defining the schema, manipulating complex text fields using array and string functions (<span>UNNEST</span>, <span>STRING_TO_ARRAY</span>), and applying Window Functions.</p>
         </div>
       </div>
 
       <div class="section accordion-level-1" id="project-environment">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Project Environment</h3>
+          <p data-i18n="section.environment">Project Environment</p>
         </div>
 
         <div class="section-content">
-          <p>The core tools used were PostgreSQL for the database and querying, with PG Admin 4 serving as the management interface. Initial data inspection was conducted in Excel. The final project was published on GitHub.</p>
+          <p data-i18n="section.environment.text-5">The core tools used were <span>PostgreSQL</span> for the database and querying, with <span>PG Admin 4</span> serving as the management interface. Initial data inspection was conducted in <span>Excel</span>. The final project was published on <span>GitHub</span>.</p>
         </div>
       </div>
 
       <div class="section accordion-level-1" id="scope-steps">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Scope & Project Steps</h3>
+          <p data-i18n="section.scope_steps">Scope & Project Steps</p>
         </div>
 
         <div class="section-content">
           <div class="section accordion-level-2" id="schema-1">
               <div class="section-header">
                 <i class="ri-arrow-right-s-fill"></i>
-                <h3>Scope</h3>
+                <span data-i18n="sub.scope">Scope</span>
               </div>
   
               <div class="section-content">
-                <p>Solve 15 medium-to-advanced business problems using complex SQL queries on 8,807 Netflix records.</p>
+                <p data-i18n="sub.scope.text-5">Solve 15 medium-to-advanced business problems using complex <span>SQL</span> queries on 8,807 Netflix records.</p>
               </div>
           </div>
 
           <div class="section accordion-level-2" id="schema-1">
               <div class="section-header">
                   <i class="ri-arrow-right-s-fill"></i>
-                  <h3>Project Steps</h3>
+                  <span data-i18n="sub.steps">Project Steps</span>
               </div>
   
               <div class="section-content">
-                <li><p>Acquired the "Netflix movies and TV shows" dataset from the Kaggle platform</p></li>
-                <li><p>Performed initial data exploration in Excel to verify column types and lengths</p></li>
-                <li><p>Created the database and defined the table schema in PostgreSQL using PG Admin 4</p></li>
-                <li><p>Defined precise data types, calculating VARCHAR limits for long text columns</p></li>
-                <li><p>Imported the data, addressing import failures by correcting the VARCHAR length</p></li>
-                <li><p>Confirmed successful import, verifying the existence of 8,807 total records</p></li>
-                <li><p>Developed complex SQL solutions for 15 specified business problems</p></li>
-                <li><p>Employed advanced techniques like UNNEST to split multi-value columns (countries, cast)</p></li>
-                <li><p>Published the documented project and code solutions on a GitHub repository</p></li>                
+                <li><p data-i18n="sub.steps.text-5.1">Acquired the 'Netflix movies and TV shows' dataset from the <span>Kaggle</span> platform</p></li>
+                <li><p data-i18n="sub.steps.text-5.2">Performed initial data exploration in <span>Excel</span> to verify column types and lengths</p></li>
+                <li><p data-i18n="sub.steps.text-5.3">Created the database and defined the table schema in <span>PostgreSQL</span> using <span>PG Admin 4</span></p></li>
+                <li><p data-i18n="sub.steps.text-5.4">Defined precise data types, calculating <span>VARCHAR</span> limits for long text columns</p></li>
+                <li><p data-i18n="sub.steps.text-5.5">Imported the data, addressing import failures by correcting the <span>VARCHAR</span> length</p></li>
+                <li><p data-i18n="sub.steps.text-5.6">Confirmed successful import, verifying the existence of 8,807 total records</p></li>
+                <li><p data-i18n="sub.steps.text-5.7">Developed complex <span>SQL</span> solutions for 15 specified business problems</p></li>
+                <li><p data-i18n="sub.steps.text-5.8">Used advanced techniques like <span>UNNEST</span> to split multi-value columns (countries, cast)</p></li>
+                <li><p data-i18n="sub.steps.text-5.9">Published the documented project and code solutions on a <span>GitHub</span> repository</p></li>                
               </div>
           </div>
         </div>
@@ -138,33 +161,31 @@
       <div class="section accordion-level-1" id="data-sources">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Data Sources & Data Gathering</h3>
+          <p data-i18n="section.data_sources">Data Sources & Data Gathering</p>
         </div>
 
         <div class="section-content">
           <div class="section accordion-level-2" id="schema-1">
               <div class="section-header">
                 <i class="ri-arrow-right-s-fill"></i>
-                <h3>Data Sources</h3>
+                <span data-i18n="sub.data_sources">Data Sources</span>
               </div>
   
               <div class="section-content">
-                <p>The dataset, titled "Netflix movies and TV shows," was downloaded from Kaggle. It contains 8,808 records (titles) with details on show ID, type (movie/TV show), director, cast, country, release date, rating, duration, genre, and descriptions.</p>
+                <p data-i18n="sub.data_sources.text-5">The dataset, titled 'Netflix movies and TV shows' was downloaded from <span>Kaggle</span>. It contains 8,808 records (titles) with details on show ID, type (movie/TV show), director, cast, country, release date, rating, duration, genre, and descriptions.</p>
               </div>
           </div>
 
           <div class="section accordion-level-2" id="schema-1">
               <div class="section-header">
                   <i class="ri-arrow-right-s-fill"></i>
-                  <h3>Data Gathering</h3>
+                  <span data-i18n="sub.data_gathering">Data Gathering</span>
               </div>
   
               <div class="section-content">
-                <p>The data gathering process began with locating and downloading the required dataset, "Netflix movies and TV shows," from the **`Kaggle`** website. This dataset was provided as a compressed (zipped) file, which was then unzipped. Link [HERE](https://www.kaggle.com/datasets/shivamb/netflix-shows).</p>
-                <br>
-                <p>Following the download, the file was opened in **`Excel`** for a critical initial exploration. This phase was essential for inspecting the characteristics of the data, especially the potential lengths of text fields such as title, director, cast, and descriptions. The check revealed that certain columns contained extremely long character strings (e.g., director up to 208 characters, cast up to 771 characters, and description up to 250 characters), which directly influenced the subsequent database schema design. The dataset was confirmed to have a total of 8,808 rows.</p>
-                <br>
-                <p>The next step involved setting up the target database in **`PostgreSQL`** and defining the table structure. During schema creation, appropriate **`VARCHAR`** limits were set for all columns based on the **`Excel`** analysis to prevent truncation errors. Subsequently, the data was imported into the PostgreSQL environment via PG Admin 4. An initial import attempt failed due to an insufficient **`VARCHAR`** limit defined for the 'listed in' (genre) column. This was resolved by using the **`DROP TABLE`** command, increasing the column limit (from 25 to 100 characters), recreating the table, and re-running the import process successfully. This ensured the availability of all 8,807 final records for analysis.</p>
+                <p data-i18n="sub.data_gathering.text-5.1">The data gathering process began with locating and downloading the required dataset, 'Netflix movies and TV shows' from the <span>Kaggle</span> website. This dataset was provided as a compressed (zipped) file, which was then unzipped. Link <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows">[HERE]</a>.</p>
+                <p data-i18n="sub.data_gathering.text-5.2">Following the download, the file was opened in <span>Excel</span> for a critical initial exploration. This phase was essential for inspecting the characteristics of the data, especially the potential lengths of text fields such as title, director, cast, and descriptions. The check revealed that certain columns contained extremely long character strings (e.g., director up to 208 characters, cast up to 771 characters, and description up to 250 characters), which directly influenced the subsequent database schema design. The dataset was confirmed to have a total of 8,808 rows.</p>
+                <p data-i18n="sub.data_gathering.text-5.3">The next step involved setting up the target database in <span>PostgreSQL</span> and defining the table structure. During schema creation, appropriate <span>VARCHAR</span> limits were set for all columns based on the <span>Excel</span> analysis to prevent truncation errors. Subsequently, the data was imported into the <span>PostgreSQL</span> environment via <span>PG Admin 4</span>. An initial import attempt failed due to an insufficient <span>VARCHAR</span> limit defined for the 'listed in' (genre) column. This was resolved by using the <span>DROP TABLE</span> command, increasing the column limit (from 25 to 100 characters), recreating the table, and re-running the import process successfully. This ensured the availability of all 8,807 final records for analysis.</p>
               </div>
           </div>
         </div>
@@ -173,7 +194,7 @@
       <div class="section accordion-level-1" id="schema">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Schema</h3>
+          <p data-i18n="sub.schema">Schema</p>
         </div>
 
         <div class="section-content">
@@ -201,21 +222,21 @@
       <div class="section accordion-level-1" id="solutions">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Solutions</h3>
+          <p data-i18n="section.solutions">Solutions</p>
         </div>
             
         <div class="section-content">
           <div class="section accordion-level-2" id="schema-1">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>1. Count the number of Movies vs TV Shows</h3>
+                    <span data-i18n="sub.solution.title-5.1">1. Count the number of Movies vs TV Shows</span>
                 </div>
   
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -232,7 +253,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -264,14 +285,14 @@
           <div class="section accordion-level-2" id="schema-2">
               <div class="section-header">
                   <i class="ri-arrow-right-s-fill"></i>
-                  <h3>2. Find the most common rating for movies and TV shows</h3>
+                  <span data-i18n="sub.solution.title-5.2">2. Find the most common rating for movies and TV shows</span>
               </div>
 
               <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -298,7 +319,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -330,14 +351,14 @@
             <div class="section accordion-level-2" id="schema-3">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>3. List all movies released in a specific year (e.g., 2020)</h3>
+                    <span data-i18n="sub.solution.title-5.3">3. List all movies released in a specific year (e.g., 2020)</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -354,7 +375,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -409,14 +430,14 @@
             <div class="section accordion-level-2" id="schema-4">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>4. Find the top 5 countries with the most content on Netflix</h3>
+                    <span data-i18n="sub.solution.title-5.4">4. Find the top 5 countries with the most content on Netflix</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -435,7 +456,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -479,14 +500,14 @@
             <div class="section accordion-level-2" id="schema-5">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>5. Identify the longest movie</h3>
+                    <span data-i18n="sub.solution.title-5.5">5. Identify the longest movie</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -507,7 +528,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -537,14 +558,14 @@
             <div class="section accordion-level-2" id="schema-6">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>6. Find content added in the last 5 years</h3>
+                    <span data-i18n="sub.solution.title-5.6">6. Find content added in the last 5 years</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -559,7 +580,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -614,14 +635,14 @@
             <div class="section accordion-level-2" id="schema-7">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>7. Find all the movies/TV shows by director 'Rajiv Chilaka’</h3>
+                    <span data-i18n="sub.solution.title-5.7">7. Find all the movies/TV shows by director 'Rajiv Chilaka'</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -635,7 +656,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -690,14 +711,14 @@
             <div class="section accordion-level-2" id="schema-8">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>8. List all TV shows with more than 5 seasons</h3>
+                    <span data-i18n="sub.solution.title-5.8">8. List all TV shows with more than 5 seasons</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -714,7 +735,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -769,14 +790,14 @@
             <div class="section accordion-level-2" id="schema-9">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>9. Count the number of content items in each genre</h3>
+                    <span data-i18n="sub.solution.title-5.9">9. Count the number of content items in each genre</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -794,7 +815,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -842,14 +863,14 @@
             <div class="section accordion-level-2" id="schema-10">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>10. Find each year and the average numbers of content release in India on netflix. return top 5 year with highest avg content release</h3>
+                    <span data-i18n="sub.solution.title-5.10">10. Find each year and the average numbers of content release in India on netflix. return top 5 year with highest avg content release</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -873,7 +894,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -928,14 +949,14 @@
             <div class="section accordion-level-2" id="schema-11">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>11. List all movies that are documentaries</h3>
+                    <span data-i18n="sub.solution.title-5.11">11. List all movies that are documentaries</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -950,7 +971,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -1005,14 +1026,14 @@
             <div class="section accordion-level-2" id="schema-12">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>12. Find all content without a director</h3>
+                    <span data-i18n="sub.solution.title-5.12">12. Find all content without a director</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -1027,7 +1048,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -1082,14 +1103,14 @@
             <div class="section accordion-level-2" id="schema-13">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>13. Find how many movies actor 'Salman Khan' appeared in last 10 years</h3>
+                    <span data-i18n="sub.solution.title-5.13">13. Find how many movies actor 'Salman Khan' appeared in last 10 years</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -1106,7 +1127,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -1136,14 +1157,14 @@
             <div class="section accordion-level-2" id="schema-14">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>14. Find the top 10 actors who have appeared in the highest number of movies produced in India</h3>
+                    <span data-i18n="sub.solution.title-5.14">14. Find the top 10 actors who have appeared in the highest number of movies produced in India</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -1163,7 +1184,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -1211,14 +1232,14 @@
             <div class="section accordion-level-2" id="schema-15">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>15. Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field. Label content containing these keywords as 'Bad' and all other content as 'Good'. Count how many items fall into each category</h3>
+                    <span data-i18n="sub.solution.title-5.15">15. Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field. Label content containing these keywords as 'Bad' and all other content as 'Good'. Count how many items fall into each category</span>
                 </div>
 
                 <div class="section-content">
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Code</h3>
+                            <span data-i18n="sub.solution.code">Code</span>
                         </div>
             
                         <div class="section-content">
@@ -1251,7 +1272,7 @@
                     <div class="section accordion-level-3" id="schema-1">
                         <div class="section-header">
                             <i class="ri-arrow-right-s-fill"></i>
-                            <h3>Result</h3>
+                            <span data-i18n="sub.solution.result">Result</span>
                         </div>
             
                         <div class="section-content">
@@ -1285,11 +1306,13 @@
       <!-- Navigation Bar -->
       <a href="../index.html" class="navigation-card">
           <i class="ri-arrow-left-fill"></i>
-          <h3>Homepage</h3>
+          <p data-i18n="navigation.homepage">Homepage</p>
       </a>
     </main>
   </div>
   <script type="module" src="../assets/js/reports.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/language-handler.js"></script>
+  <script src="../assets/js/languages.js"></script>
 </body>
 </html>

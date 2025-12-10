@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unsupervised Music Track Clustering</title>
-    <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -13,16 +13,16 @@
     <header class="header">
         <div class="header-content">
             <div class="header-title">
-                <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+                <img src="../assets/img/logo.svg" alt="Atom icon" class="header-logo" />
                 <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
                 <span class="separator">/</span>
-                <span class="current">Unsupervised Music Track Clustering</span>
+                <span class="current" data-i18n="properties.title-1">Unsupervised Music Track Clustering</span>
             </div>
             <div class="header-actions">
                 <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
                     <i class="ri-moon-fill"></i>
                 </button>
-                <button class="change-language">Spanish</button>
+                <button class="change-language" id="langToggle" data-i18n="button.language">Spanish</button>
             </div>
         </div>
     </header>
@@ -36,7 +36,7 @@
         <!-- Project Header -->
         <div class="project-header">
             <i class="ri-music-2-fill"></i>
-            <h1>Unsupervised Music Track Clustering</h1>
+            <h1 data-i18n="properties.title-1">Unsupervised Music Track Clustering</h1>
         </div>
 
         <!-- Properties Section -->
@@ -44,9 +44,9 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-align-left"></i>
-                    <span>Description</span>
+                    <span data-i18n="properties.description">Description</span>
                 </div>
-                <div class="property-value">
+                <div class="property-value no-flex" data-i18n="properties.description.text-1">
                     AI system organizing music catalogs using <strong>unsupervised clustering</strong> on 196 acoustic features from GTZAN.
                 </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-list-check"></i>
-                    <span>Tool</span>
+                    <span data-i18n="properties.tool">Tool</span>
                 </div>
                 <div class="property-value">
                     <span class="tag tag-green">Python</span>
@@ -65,7 +65,7 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-list-check"></i>
-                    <span>Project Type</span>
+                    <span data-i18n="properties.projectType">Project Type</span>
                 </div>
                 <div class="property-value">
                     <span class="tag tag-blue">Data Cleaning</span>
@@ -80,7 +80,7 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-link"></i>
-                    <span>Link</span>
+                    <span data-i18n="properties.link">Link</span>
                 </div>
                 <div class="property-value">
                     <a href="https://github.com/JavierCables/tfm/blob/main/Master's Thesis - English.ipynb" target="_blank">github.com/JavierCables/tfm/blob/main/Master's Thesis - English.ipynb</a>
@@ -90,10 +90,10 @@
             <div class="property-row">
                 <div class="property-label">
                     <i class="ri-folder-line"></i>
-                    <span>Data</span>
+                    <span data-i18n="properties.data">Data</span>
                 </div>
                 <div class="property-value">
-                    <a href="https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification" target="_blank">https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification</a>
+                    <a href="https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification" target="_blank">kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification</a>
                 </div>
             </div>
         </section>
@@ -101,30 +101,32 @@
         <!-- Navigation Bar -->
         <a href="../index.html" class="navigation-card">
             <i class="ri-arrow-left-fill"></i>
-            <h3>Homepage</h3>
+            <p data-i18n="navigation.homepage">Homepage</p>
         </a>
 
         <!-- Summary Section -->
         <section class="callout-box summary-section">
             <div class="callout-header">
                 <i class="ri-align-left"></i>
-                <h3>Summary</h3>
+                <h3 data-i18n="summary.title">Summary</h3>
             </div>
 
             <div class="summary-content">
                 <div class="summary-item">
-                    <h4>Goal</h4>
-                    <p>Develop an automated system for music organization using unsupervised learning techniques on acoustic features derived directly from audio signals. The aim was to identify intrinsic similarities between tracks, eliminating dependence on manual labels and reducing cultural biases inherent to traditional cataloging. This scalable solution contributes significantly to the <span>Music Information Retrieval</span> (MIR) field and offers practical applications for streaming platforms and recommendation systems.</p>
+                    <h4 data-i18n="summary.goal.title">Goal</h4>
+                    <p data-i18n="summary.goal.text-1">Develop an automated system for music organization using unsupervised learning techniques on acoustic features derived directly from audio signals. The aim was to identify intrinsic similarities between tracks, eliminating dependence on manual labels and reducing cultural biases inherent to traditional cataloging. This scalable solution contributes significantly to the <span>Music Information Retrieval</span> (MIR) field and offers practical applications for streaming platforms and recommendation systems.</p>
+                    <br>
                 </div>
 
                 <div class="summary-item">
-                    <h4>Process</h4>
-                    <p>The pipeline began with curating the GTZAN dataset (999 tracks) to ensure data quality and consistency. We implemented a feature extraction pipeline to derive 196 acoustic features (including <span>MFCC</span>, <span>Chroma Frequencies</span>, <span>Spectral Centroid</span>, etc.) per track. Statistical aggregation (mean, standard deviation, percentiles) transformed temporal data into long-term statistics. Four clustering algorithms (K-Means, <span>DBSCAN</span>, <span>HDBSCAN</span>, <span>GMM</span>) were implemented and compared. Optimization involved systematic parameter selection for <span>DBSCAN</span> and using information criteria (BIC/AIC) for <span>GMM</span>.</p>
+                    <h4 data-i18n="summary.process.title">Process</h4>
+                    <p data-i18n="summary.process.text-1">The pipeline began with curating the GTZAN dataset (999 tracks) to ensure data quality and consistency. We implemented a feature extraction pipeline to derive 196 acoustic features (including <span>MFCC</span>, <span>Chroma Frequencies</span>, <span>Spectral Centroid</span>, etc.) per track. Statistical aggregation (mean, standard deviation, percentiles) transformed temporal data into long-term statistics. Four clustering algorithms (<span>K-Means</span>, <span>DBSCAN</span>, <span>HDBSCAN</span>, <span>GMM</span>) were implemented and compared. Optimization involved systematic parameter selection for <span>DBSCAN</span> and using information criteria (BIC/AIC) for <span>GMM</span>.</p>
+                    <br>
                 </div>
 
                 <div class="summary-item">
-                    <h4>Insights</h4>
-                    <p>The system successfully clustered tracks, with <span>DBSCAN</span> demonstrating superior performance, achieving a combined score of 0.563 across 18 clusters. This outcome highlights that density-based algorithms effectively capture the variable density characteristics of musical patterns. The optimized <span>Top20</span> feature subset provided the best balance between acoustic information and computational efficiency. The results confirm the viability of automatic clustering for massive music catalog organization, offering a scalable alternative to traditional label-based methods.</p>
+                    <h4 data-i18n="summary.insights.title">Insights</h4>
+                    <p data-i18n="summary.insights.text-1">The system successfully clustered tracks, with <span>DBSCAN</span> demonstrating superior performance, achieving a combined score of 0.563 across 18 clusters. This outcome highlights that density-based algorithms effectively capture the variable density characteristics of musical patterns. The optimized <span>Top20</span> feature subset provided the best balance between acoustic information and computational efficiency. The results confirm the viability of automatic clustering for massive music catalog organization, offering a scalable alternative to traditional label-based methods.</p>
                 </div>
             </div>
         </section>
@@ -133,7 +135,7 @@
         <section class="callout-box visualization-section">
             <div class="callout-header">
                 <i class="ri-bar-chart-2-fill"></i>
-                <h3>Relationship between Evaluation Metrics (Size proportional to Combined Score)</h3>
+                <h3 data-i18n="viz.metrics.title-1">Relationship between Evaluation Metrics (Size proportional to Combined Score)</h3>
             </div>
             <img src="../assets/img/portfolio-1-1.png" alt="Metrics Visualization" class="visualization-image">
         </section>
@@ -141,24 +143,25 @@
         <section class="callout-box visualization-section">
             <div class="callout-header">
                 <i class="ri-table-fill"></i>
-                <h3>Heatmap: Subset Performance by Metric</h3>
+                <h3 data-i18n="viz.heatmap.title-1">Heatmap: Subset Performance by Metric</h3>
             </div>
-            <p>On the other hand, customers who have not complained have pretty much all stayed with the bank. In fact, all active customers who have not complained are all still using the banks products and services.</p>
             <img src="../assets/img/portfolio-1-2.png" alt="Heatmap Visualization" class="visualization-image">
         </section>
 
         <!-- Advanced Report -->
         <a href="../reports/report-music-clustering.html" class="report-card">
             <i class="ri-music-2-fill"></i>
-            <h3>Advanced Report</h3>
+            <p data-i18n="advanced.report">Advanced Report</p>
         </a>
 
         <!-- Bottom Navigation -->
         <a href="../index.html" class="navigation-card">
             <i class="ri-arrow-left-fill"></i>
-            <h3>Homepage</h3>
+            <p data-i18n="navigation.homepage">Homepage</p>
         </a>
     </main>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/language-handler.js"></script>
+    <script src="../assets/js/languages.js"></script>
 </body>
 </html>

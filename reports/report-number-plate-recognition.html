@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="https://ext.same-assets.com/2214678738/1659879621.svg" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
   <title>Detailed Report — For More Information</title>
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
@@ -12,6 +12,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/dracula.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
+
+  <style>
+    /* Cambiar fondo del bloque de código */
+    pre code.hljs {
+      background: #36312c;
+      color: #ebd1b7;
+      border-radius: 7px;
+      padding: 1.2rem;
+      display: block;
+    }
+    .hljs-keyword { color: #95cc5e }
+    .hljs-string  { color: #ee6018 }
+    .hljs-number  { color: #f8bb39 }
+    .hljs-comment { color: #7a7267; font-style: italic; }
+    .hljs-meta { color: #f8bb39; }
+    .hljs-built_in { color: #95cc5e; }
+    .hljs-title.function_ { color: #ee6018; }
+    .hljs-literal { color: #f8bb39; }
+    .hljs-title.class_ { color: #ee1895; }
+    .hljs-variable { color: #ee1895; }
+    .hljs-params { color: #f8bb39; }
+    .hljs-type { color: #f8bb39; }
+  </style>
 </head>
 
 <body>
@@ -20,18 +43,18 @@
     <header class="header">
       <div class="header-content">
         <div class="header-title">
-          <img src="https://ext.same-assets.com/2214678738/1659879621.svg" alt="Atom icon" class="header-logo" />
+          <img src="../assets/img/logo.svg" alt="Atom icon" class="header-logo" />
           <a href="../index.html">JAVIER CABLES PORTFOLIO</a>
           <span class="separator">/</span>
-          <a href="../projects/project-number-plate-recognition.html">Automatic Number Plate Recognition</a>
+          <a href="../projects/project-number-plate-recognition.html" data-i18n="properties.title-2">Automatic Number Plate Recognition</a>
           <span class="separator">/</span>
-          <span class="current">Detailed Report</span>
+          <span class="current" data-i18n="header.report">Detailed Report</span>
         </div>
         <div class="header-actions">
           <button class="dark-mode-toggle" id="themeToggle" aria-label="Toggle dark mode">
             <i class="ri-moon-fill"></i>
           </button>
-          <button class="change-language">Spanish</button>
+          <button class="change-language" id="langToggle" data-i18n="button.language">Spanish</button>
         </div>
       </div>
     </header>
@@ -45,29 +68,29 @@
       <!-- Report Header -->
       <div class="project-header">
           <i class="ri-steering-2-fill"></i>
-          <h1>Detailed Report — For More Information</h1>
+          <h1 data-i18n="report.title">Detailed Report — For More Information</h1>
       </div>
 
       <!-- Navigation Bar -->
       <a href="../index.html" class="navigation-card">
           <i class="ri-arrow-left-fill"></i>
-          <h3>Homepage</h3>
+          <p data-i18n="navigation.homepage">Homepage</p>
       </a>
 
       <!-- Table of Contents Callout -->
       <div class="callout-box">
         <div class="callout-header">
           <i class="ri-list-check"></i>
-          <h3>Table of Contents</h3>
+          <h3 data-i18n="toc.title">Table of Contents</h3>
         </div>
     
         <div class="callout-content">
           <ul class="toc-list">
-            <li><a href="#project-summary">Project Summary</a></li>
-            <li><a href="#project-environment">Project Environment</a></li>
-            <li><a href="#scope-steps">Scope & Project Steps</a></li>
-            <li><a href="#data-sources">Data Sources & Data Gathering</a></li>
-            <li><a href="#main-code">Main Code</a></li>
+            <li><a href="#project-summary" data-i18n="section.summary">Project Summary</a></li>
+            <li><a href="#project-environment" data-i18n="section.environment">Project Environment</a></li>
+            <li><a href="#scope-steps" data-i18n="section.scope_steps">Scope & Project Steps</a></li>
+            <li><a href="#data-sources" data-i18n="section.data_sources">Data Sources & Data Gathering</a></li>
+            <li><a href="#main-code" data-i18n="section.main_code">Main Code</a></li>
           </ul>
         </div>
       </div>
@@ -76,58 +99,58 @@
       <div class="section accordion-level-1" id="project-summary">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Project Summary</h3>
+          <p data-i18n="section.summary">Project Summary</p>
         </div>
 
         <div class="section-content">
-          <p>Developed a 100% <span>Python</span> <span>ANPR</span> pipeline for video footage. Integrated <span>YOLOv8</span> for car/plate detection, <span>SORT</span> for vehicle tracking, and <span>EasyOCR</span> for robust text recognition. The system assigns unique car IDs across frames and resolves license plate ambiguity by selecting the text with the highest <span>OCR confidence score</span>.</p>
+          <p data-i18n="section.summary.text-2">Developed a 100% <span>Python</span> <span>ANPR</span> pipeline for video footage. Integrated <span>YOLOv8</span> for car/plate detection, <span>SORT</span> for vehicle tracking, and <span>EasyOCR</span> for robust text recognition. The system assigns unique car IDs across frames and resolves license plate ambiguity by selecting the text with the highest <span>OCR confidence score</span>.</p>
         </div>
       </div>
 
       <div class="section accordion-level-1" id="project-environment">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Project Environment</h3>
+          <p data-i18n="section.environment">Project Environment</p>
         </div>
 
         <div class="section-content">
-          <p>The environment is 100% <span>Python</span>. Key tools include the <span>YOLOv8</span> object detector (<span>Ultralytics</span>), the <span>SORT</span> object tracking algorithm, and the <span>EasyOCR</span> Python library for text recognition. Image processing utilized <span>OpenCV</span> (<span>CV2</span>).</p>
+          <p data-i18n="section.environment.text-2">The environment is 100% <span>Python</span>. Key tools include the <span>YOLOv8</span> object detector (<span>Ultralytics</span>), the <span>SORT</span> object tracking algorithm, and the <span>EasyOCR</span> library for text recognition. Image processing utilized <span>OpenCV</span> (<span>CV2</span>).</p>
         </div>
       </div>
 
       <div class="section accordion-level-1" id="scope-steps">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Scope & Project Steps</h3>
+          <p data-i18n="section.scope_steps">Scope & Project Steps</p>
         </div>
 
         <div class="section-content">
           <div class="section accordion-level-2" id="schema-1">
               <div class="section-header">
                 <i class="ri-arrow-right-s-fill"></i>
-                <h3>Scope</h3>
+                <span data-i18n="sub.scope">Scope</span>
               </div>
   
               <div class="section-content">
-                <p>End-to-end <span>ANPR</span> system focused on detecting, tracking, and reading UK license plates (<span>LLNNLLL</span>) in highway video.</p>
+                <p data-i18n="sub.scope.text-2">End-to-end <span>ANPR</span> system focused on detecting, tracking, and reading UK license plates (<span>LLNNLLL</span>) in highway video.</p>
               </div>
           </div>
 
           <div class="section accordion-level-2" id="schema-1">
               <div class="section-header">
                   <i class="ri-arrow-right-s-fill"></i>
-                  <h3>Project Steps</h3>
+                  <span data-i18n="sub.steps">Project Steps</span>
               </div>
   
               <div class="section-content">
-                <li><p>Load two <span>YOLOv8</span> models: one for car detection (<span>COCO</span>) and one for license plate detection</p></li>
-                <li><p>Read video frames sequentially and detect vehicles using the <span>COCO</span> model</p></li>
-                <li><p>Implement <span>SORT</span> object tracking to assign unique, persistent IDs to detected vehicles</p></li>
-                <li><p>Detect license plates and associate each plate bounding box with its respective tracked car</p></li>
-                <li><p>Crop the plate image and apply preprocessing: grayscale conversion and thresholding</p></li>
-                <li><p>Read text using <span>EasyOCR</span>; validate and correct common character confusions (e.g., S/5, O/0)</p></li>
-                <li><p>Structure results (ID, bounding box, text, scores) into a dictionary keyed by frame number</p></li>
-                <li><p>Write the complete structured results to a <span>CSV</span> output file for storage and visualization</p></li>
+                <li><p data-i18n="sub.steps.text-2.1">Load two <span>YOLOv8</span> models: one for car detection (<span>COCO</span>) and one for license plate detection</p></li>
+                <li><p data-i18n="sub.steps.text-2.2">Read video frames sequentially and detect vehicles using the <span>COCO</span> model</p></li>
+                <li><p data-i18n="sub.steps.text-2.3">Implement <span>SORT</span> object tracking to assign unique, persistent IDs to detected vehicles</p></li>
+                <li><p data-i18n="sub.steps.text-2.4">Detect license plates and associate each plate bounding box with its respective tracked car</p></li>
+                <li><p data-i18n="sub.steps.text-2.5">Crop the plate image and apply preprocessing: grayscale conversion and thresholding</p></li>
+                <li><p data-i18n="sub.steps.text-2.6">Read text using <span>EasyOCR</span>; validate and correct common character confusions (e.g., S/5, O/0)</p></li>
+                <li><p data-i18n="sub.steps.text-2.7">Structure results (ID, bounding box, text, scores) into a dictionary keyed by frame number</p></li>
+                <li><p data-i18n="sub.steps.text-2.8">Write the complete structured results to a <span>CSV</span> output file for storage and visualization</p></li>
               </div>
           </div>
         </div>
@@ -136,33 +159,31 @@
       <div class="section accordion-level-1" id="data-sources">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Data Sources & Data Gathering</h3>
+          <p data-i18n="section.data_sources">Data Sources & Data Gathering</p>
         </div>
 
         <div class="section-content">
           <div class="section accordion-level-2" id="schema-1">
               <div class="section-header">
                 <i class="ri-arrow-right-s-fill"></i>
-                <h3>Data Sources</h3>
+                <span data-i18n="sub.data_sources">Data Sources</span>
               </div>
   
               <div class="section-content">
-                <p>Primary data is a highway video with many cars, featuring a very frontal view of the vehicles and license plates. The license plate detector model was trained externally using a linked dataset.</p>
+                <p data-i18n="sub.data_sources.text-2">Primary data is a highway video with many cars, featuring a very frontal view of the vehicles and license plates. The license plate detector model was trained externally using a linked dataset.</p>
               </div>
           </div>
 
           <div class="section accordion-level-2" id="schema-1">
               <div class="section-header">
                   <i class="ri-arrow-right-s-fill"></i>
-                  <h3>Data Gathering</h3>
+                  <span data-i18n="sub.data_gathering">Data Gathering</span>
               </div>
   
               <div class="section-content">
-                <p>Data was gathered from an input video file (<span>sample.mp4</span>) by reading frames sequentially using <span>OpenCV</span>/<span>CV2</span>. Two separate object detection models were used per frame: A pre-trained <span>COCO</span> model was utilized to detect general vehicles (such as cars, buses, and trucks), and a custom-trained YOLOv8 model was used to detect the license plates specifically.</p>
-                <br>
-                <p>The <span>SORT</span> algorithm was applied to the vehicle detections to gather persistent tracking data, assigning unique car IDs that identify the vehicle across multiple frames.</p>
-                <br>
-                <p>For license plate text, the plate image was cropped, pre-processed (converted to grayscale and thresholded) to simplify the image, and then the text and confidence score were gathered using the <span>EasyOCR</span> library. This raw detection and <span>OCR</span> data were then filtered for vehicles, associated with a car ID, validated against the specific UK format (two letters, two numbers, three letters), and structured into a dictionary keyed by the frame number before final output to a <span>CSV file</span>. Missing bounding box data in frames where the license plate was not successfully read was handled via external data interpolation to ensure stable visualization.</p>
+                <p data-i18n="sub.data_gathering.text-2.1">Data was gathered from an input video file (<span>sample.mp4</span>) by reading frames sequentially using <span>OpenCV</span>/<span>CV2</span>. Two separate object detection models were used per frame: A pre-trained <span>COCO</span> model was utilized to detect general vehicles (such as cars, buses, and trucks), and a custom-trained <span>YOLOv8</span> model was used to detect the license plates specifically.</p>
+                <p data-i18n="sub.data_gathering.text-2.2">The <span>SORT</span> algorithm was applied to the vehicle detections to gather persistent tracking data, assigning unique car IDs that identify the vehicle across multiple frames.</p>
+                <p data-i18n="sub.data_gathering.text-2.3">For license plate text, the plate image was cropped, pre-processed (converted to grayscale and thresholded) to simplify the image, and then the text and confidence score were gathered using the <span>EasyOCR</span> library. This raw detection and <span>OCR</span> data were then filtered for vehicles, associated with a car ID, validated against the specific UK format (two letters, two numbers, three letters), and structured into a dictionary keyed by the frame number before final output to a <span>CSV file</span>. Missing bounding box data in frames where the license plate was not successfully read was handled via external data interpolation to ensure stable visualization.</p>
               </div>
           </div>
         </div>
@@ -171,14 +192,14 @@
       <div class="section accordion-level-1" id="main-code">
         <div class="section-header">
           <i class="ri-arrow-right-s-fill"></i>
-          <h3>Main Code</h3>
+          <p data-i18n="section.main_code">Main Code</p>
         </div>
             
         <div class="section-content">
           <div class="section accordion-level-2" id="schema-1">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>main.py</h3>
+                    <span>main.py</span>
                 </div>
   
                 <div class="section-content">
@@ -271,7 +292,7 @@
           <div class="section accordion-level-2" id="schema-2">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>util.py</h3>
+                    <span>util.py</span>
                 </div>
 
                 <div class="section-content">
@@ -441,7 +462,7 @@
             <div class="section accordion-level-2" id="schema-3">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>visualize.py</h3>
+                    <span>visualize.py</span>
                 </div>
 
                 <div class="section-content">
@@ -568,7 +589,7 @@
         <div class="section accordion-level-2" id="schema-3">
                 <div class="section-header">
                     <i class="ri-arrow-right-s-fill"></i>
-                    <h3>add_missing_data.py</h3>
+                    <span>add_missing_data.py</span>
                 </div>
 
                 <div class="section-content">
@@ -675,11 +696,13 @@
       <!-- Navigation Bar -->
       <a href="../index.html" class="navigation-card">
           <i class="ri-arrow-left-fill"></i>
-          <h3>Homepage</h3>
+          <p data-i18n="navigation.homepage">Homepage</p>
       </a>
     </main>
   </div>
   <script type="module" src="../assets/js/reports.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/language-handler.js"></script>
+  <script src="../assets/js/languages.js"></script>
 </body>
 </html>
