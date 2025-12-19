@@ -8,6 +8,8 @@ const translations = {
     "contact.resume": "Resume",
     "contact.location": "Madrid, Spain",
     "skills.title": "SKILLS",
+    "certificate.title": "CERTIFICATES",
+    "certificate.tooltip": "View credential",
     "projects.title": "PROJECTS",
     "footer.thanks": "Thank you for taking the time to check out my portfolio!",
 
@@ -217,6 +219,8 @@ const translations = {
     "contact.resume": "Currículum",
     "contact.location": "Madrid, España",
     "skills.title": "HABILIDADES",
+    "certificate.title": "CERTIFICADOS",
+    "certificate.tooltip": "Ver credencial",
     "projects.title": "PROYECTOS",
     "footer.thanks": "¡Gracias por tomarte el tiempo de revisar mi portfolio!",  
 

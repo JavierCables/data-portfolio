@@ -455,6 +455,67 @@ body.dark-mode::before {
   transform: scale(1.1);
 }
 
+
+/* Certificates */
+.certificates-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certificate-item {
+  position: relative;
+  height: 200px;
+}
+
+.certificate-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.certificate-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Hover effect: claramente clickable */
+.certificate-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Tooltip */
+.certificate-tooltip {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--text-black);
+  color: var(--bg-light-grey);
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, bottom 0.2s ease;
+  z-index: 10;
+}
+
+.certificate-item:hover .certificate-tooltip {
+  opacity: 1;
+  bottom: -44px;
+}
+
 /* Tooltip */
 .tooltip {
   position: absolute;
